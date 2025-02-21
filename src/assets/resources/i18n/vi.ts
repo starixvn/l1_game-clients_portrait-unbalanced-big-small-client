@@ -201,19 +201,12 @@ export const languages = {
         "win_loss": "Thắng Thua",
         "you_reach_max_win": "Bạn Đã Đạt Mức Tiền Thắng Tối Đa"
     },
-    "SicBo": {
-        "double": "Đôi",
-        "game_icon_name": "Tài Xỉu Sic Bo",
-        "game_name": "Tài Xỉu Sic Bo",
-        "glossary_anyTriple": "Bộ Ba Bất Kỳ",
+    "UnbalancedBigSmall4": {
+        "game_name": "Tài Xỉu Monte Carlo"
+    },
+    "BigSmall": {
         "glossary_big": "Tài",
-        "glossary_small": "Xỉu",
-        "glossary_specific": "Cược Số",
-        "scoreboard_anyTriple": "B",
-        "scoreboard_big": "T",
-        "scoreboard_small": "X",
-        "single": "Đơn",
-        "triple": "Bộ Ba"
+        "glossary_small": "Xỉu"
     }
 };
 

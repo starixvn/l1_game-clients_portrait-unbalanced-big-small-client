@@ -201,19 +201,12 @@ export const languages = {
         "win_loss": "Win Loss",
         "you_reach_max_win": "You reached the max win"
     },
-    "SicBo": {
-        "double": "Double",
-        "game_icon_name": "Sic Bo",
-        "game_name": "Sic Bo",
-        "glossary_anyTriple": "Any Triple",
+    "UnbalancedBigSmall4": {
+        "game_name": "Monte Carlo Big Small"
+    },
+    "BigSmall": {
         "glossary_big": "Big",
-        "glossary_small": "Small",
-        "glossary_specific": "Specific Number",
-        "scoreboard_anyTriple": "T",
-        "scoreboard_big": "B",
-        "scoreboard_small": "S",
-        "single": "Single",
-        "triple": "Triple"
+        "glossary_small": "Small"
     }
 };
 

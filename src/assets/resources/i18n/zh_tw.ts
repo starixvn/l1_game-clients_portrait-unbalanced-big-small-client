@@ -201,19 +201,12 @@ export const languages = {
         "win_loss": "贏 輸",
         "you_reach_max_win": "您達到了最大勝利"
     },
-    "SicBo": {
-        "double": "雙倍",
-        "game_icon_name": "骰寶",
-        "game_name": "骰寶",
-        "glossary_anyTriple": "任何三重",
+    "UnbalancedBigSmall4": {
+        "game_name": "Monte Carlo Big Small"
+    },
+    "BigSmall": {
         "glossary_big": "大",
-        "glossary_small": "小",
-        "glossary_specific": "特定號碼",
-        "scoreboard_anyTriple": "三",
-        "scoreboard_big": "大",
-        "scoreboard_small": "小",
-        "single": "單",
-        "triple": "三倍"
+        "glossary_small": "小"
     }
 };
 

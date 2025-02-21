@@ -12,7 +12,7 @@ import { siteConfigs } from "../../../scripts/site-configs";
 import { containerOptions, settings } from "../game-settings";
 import { GameResult } from "./game-result";
 
-startGame(settings.name, containerOptions, siteConfigs, settings.namespaces.concat(["Baccarat", "ui"]));
+startGame(settings.name, containerOptions, siteConfigs, settings.namespaces);
 const { Rounds, RoundHistories } = gc;
 
 const { ccclass, property } = _decorator;

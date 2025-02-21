@@ -201,19 +201,12 @@ export const languages = {
         "win_loss": "Menang Kalah",
         "you_reach_max_win": "Anda mencapai Maksimal Menang"
     },
-    "SicBo": {
-        "double": "Dobel",
-        "game_icon_name": "Sic Bo",
-        "game_name": "Sic Bo",
-        "glossary_anyTriple": "Tripel apa saja",
+    "UnbalancedBigSmall4": {
+        "game_name": "Monte Carlo Big Small"
+    },
+    "BigSmall": {
         "glossary_big": "Besar",
-        "glossary_small": "Kecil",
-        "glossary_specific": "Nomor Spesifik",
-        "scoreboard_anyTriple": "T",
-        "scoreboard_big": "B",
-        "scoreboard_small": "K",
-        "single": "Single",
-        "triple": "Tripel"
+        "glossary_small": "Kecil"
     }
 };
 

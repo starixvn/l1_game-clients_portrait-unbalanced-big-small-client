@@ -201,19 +201,12 @@ export const languages = {
         "win_loss": "ชนะ แพ้",
         "you_reach_max_win": "คุณถึงยอดชนะสูงสุด"
     },
-    "SicBo": {
-        "double": "สองเท่า",
-        "game_icon_name": "Sic Bo",
-        "game_name": "Sic Bo",
-        "glossary_anyTriple": "ตองใดๆ",
+    "UnbalancedBigSmall4": {
+        "game_name": "Monte Carlo Big Small"
+    },
+    "BigSmall": {
         "glossary_big": "ใหญ่",
-        "glossary_small": "เล็ก",
-        "glossary_specific": "หมายเลขเฉพาะ",
-        "scoreboard_anyTriple": "T",
-        "scoreboard_big": "B",
-        "scoreboard_small": "S",
-        "single": "เดี่ยว",
-        "triple": "สามเท่า"
+        "glossary_small": "เล็ก"
     }
 };
 

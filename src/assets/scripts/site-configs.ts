@@ -21,12 +21,12 @@ const defaultConfig: gc.Configs.SiteConfigs = {
     enableMsgpackParserAllGames: false,
     enableMsgpackParserOnNotification: false,
     websocket: {
-        proxyPath: "sicbo",
-        route: "sicbo",
+        proxyPath: "unbalancedbigsmall4",
+        route: "unbalancedbigsmall",
     },
-    mainObserverNamespace: "SicBo",
+    mainObserverNamespace: "UnbalancedBigSmall4",
     tolgeeUrl: "",
-    storagePrefixKey: "portrait_sicbo",
+    storagePrefixKey: "portrait_unbalancedbigsmall4",
     backgroundNoTranslate: true,
 };
 

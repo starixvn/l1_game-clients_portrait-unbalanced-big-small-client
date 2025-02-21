@@ -39,7 +39,7 @@ const CONFIG: Config = {
     },
     languages: ["en", "id", "th", "vi", "zh_cn", "zh_tw"],
     namespaces: {
-        list: ["Common", "SicBo"],
+        list: ["Common", "UnbalancedBigSmall4", "BigSmall"],
         specificKeys: {},
         shouldFilterKeys: (ns: string) => Object.keys(CONFIG.namespaces.specificKeys).includes(ns),
         getSpecificKeys: (ns: string) => CONFIG.namespaces.specificKeys[ns as keyof typeof CONFIG.namespaces.specificKeys] || [],

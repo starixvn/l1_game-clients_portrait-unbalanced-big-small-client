@@ -4,18 +4,19 @@ import { LogStore } from "db://shared-components/game/scripts/stores/log-store";
 import { sharedContainer } from "../../scripts/shared-container";
 
 export const settings = {
-    id: 25,
-    name: "SicBo",
-    namespaces: ["SicBo"],
+    id: 55,
+    name: "UnbalancedBigSmall4",
+    namespaces: ["UnbalancedBigSmall4", "BigSmall"],
     durations: {
-        wholeRound: 42,
+        wholeRound: 40,
         lockingBet: 3,
         placingBet: 30,
         generatingResult: 4,
-        showingResult: 7,
+        showingResult: 5,
         startRound: 1,
     },
     numberOfRoundHistory: 100,
+    isMiniGame: true,
 };
 
 export const containerOptions: gc.IContainerOptions = {
