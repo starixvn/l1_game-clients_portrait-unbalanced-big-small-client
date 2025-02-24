@@ -9,7 +9,7 @@ export class BetResponseHandlers implements gc.Shared.IMultipleHandlers {
     @inject(BetChoiceStore) protected readonly betChoiceStore: BetChoiceStore;
     @inject(gc.Bet.BetStore) protected readonly betStore: gc.Bet.BetStore;
     @inject(gc.Chips.ChipStore) protected readonly chipStore: gc.Chips.ChipStore;
-    handleBetChoice(betChoice: string) {
+    handleBetChoice(betChoice: any) {
         this.betChoiceStore.betChoice = betChoice;
         if (this.betStore.lastReceivedBet.value > 0) {
             this.chipStore.ownChip = { betChoice: this.betChoiceStore.betChoice, amount: this.betStore.lastReceivedBet.value };

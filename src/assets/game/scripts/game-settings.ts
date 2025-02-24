@@ -10,7 +10,7 @@ export const settings = {
     namespaces: ["UnbalancedBigSmall4", "BigSmall"],
     durations: {
         wholeRound: 40,
-        lockingBet: 3,
+        lockingBet: 5,
         placingBet: 30,
         generatingResult: 4,
         showingResult: 5,
