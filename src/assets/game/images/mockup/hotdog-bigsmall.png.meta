@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "48f68dae-5a09-4924-a796-7404f39786ea",
+  "uuid": "307d554f-8fb6-49ea-a36d-d436f4dfd2c2",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "48f68dae-5a09-4924-a796-7404f39786ea@6c48a",
-      "displayName": "hotdog-sicbo",
+      "uuid": "307d554f-8fb6-49ea-a36d-d436f4dfd2c2@6c48a",
+      "displayName": "hotdog-bigsmall",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "48f68dae-5a09-4924-a796-7404f39786ea",
+        "imageUuidOrDatabaseUri": "307d554f-8fb6-49ea-a36d-d436f4dfd2c2",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,8 +34,8 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "48f68dae-5a09-4924-a796-7404f39786ea@f9941",
-      "displayName": "hotdog-sicbo",
+      "uuid": "307d554f-8fb6-49ea-a36d-d436f4dfd2c2@f9941",
+      "displayName": "hotdog-bigsmall",
       "id": "f9941",
       "name": "spriteFrame",
       "userData": {
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "48f68dae-5a09-4924-a796-7404f39786ea@6c48a",
+        "imageUuidOrDatabaseUri": "307d554f-8fb6-49ea-a36d-d436f4dfd2c2@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "48f68dae-5a09-4924-a796-7404f39786ea@6c48a"
+    "redirect": "307d554f-8fb6-49ea-a36d-d436f4dfd2c2@6c48a"
   }
 }

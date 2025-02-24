@@ -206,7 +206,9 @@ export const languages = {
     },
     "BigSmall": {
         "glossary_big": "大",
-        "glossary_small": "小"
+        "glossary_small": "小",
+        "scoreboard_big": "大",
+        "scoreboard_small": "小"
     }
 };
 

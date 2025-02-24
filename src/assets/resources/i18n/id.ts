@@ -206,7 +206,9 @@ export const languages = {
     },
     "BigSmall": {
         "glossary_big": "Besar",
-        "glossary_small": "Kecil"
+        "glossary_small": "Kecil",
+        "scoreboard_big": "B",
+        "scoreboard_small": "K"
     }
 };
 

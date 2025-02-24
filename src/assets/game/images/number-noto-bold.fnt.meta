@@ -10,7 +10,7 @@
   "userData": {
     "_fntConfig": {
       "fontSize": 48,
-      "atlasName": "portrait-sicbo.webp",
+      "atlasName": "portrait-unbalancedbigsmall.webp",
       "fontDefDictionary": {
         "9": {
           "rect": {
@@ -269,6 +269,6 @@
       "kerningDict": {}
     },
     "fontSize": 48,
-    "textureUuid": "6145dced-134f-4326-8b1c-db50542619e5"
+    "textureUuid": "6c3fe416-0428-4788-8de6-2bbfbe8cd778"
   }
 }

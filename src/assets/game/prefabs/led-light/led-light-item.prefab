@@ -38,7 +38,7 @@
       }
     ],
     "_prefab": {
-      "__id__": 23
+      "__id__": 22
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -133,8 +133,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 23,
-      "height": 23
+      "width": 28,
+      "height": 28
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -170,7 +170,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "de2e21ff-8da4-4a9a-b21d-291e256c2120@688c8",
+      "__uuid__": "4403ab27-f399-42b4-9acd-b11a7eb9a5a9@763b8",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -269,8 +269,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 25,
-      "height": 25
+      "width": 28,
+      "height": 28
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -355,8 +355,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 23,
-      "height": 23
+      "width": 28,
+      "height": 28
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -412,9 +412,6 @@
       },
       {
         "__id__": 21
-      },
-      {
-        "__id__": 22
       }
     ],
     "_id": ""
@@ -425,17 +422,9 @@
   },
   {
     "__type__": "LedLightItemModel",
-    "choiceNames": "anyTriple",
-    "backgroundForChoice": {
-      "__uuid__": "de2e21ff-8da4-4a9a-b21d-291e256c2120@2a826",
-      "__expectedType__": "cc.SpriteFrame"
-    }
-  },
-  {
-    "__type__": "LedLightItemModel",
     "choiceNames": "big",
     "backgroundForChoice": {
-      "__uuid__": "de2e21ff-8da4-4a9a-b21d-291e256c2120@49599",
+      "__uuid__": "4403ab27-f399-42b4-9acd-b11a7eb9a5a9@03b68",
       "__expectedType__": "cc.SpriteFrame"
     }
   },
@@ -443,7 +432,7 @@
     "__type__": "LedLightItemModel",
     "choiceNames": "small",
     "backgroundForChoice": {
-      "__uuid__": "de2e21ff-8da4-4a9a-b21d-291e256c2120@688c8",
+      "__uuid__": "4403ab27-f399-42b4-9acd-b11a7eb9a5a9@763b8",
       "__expectedType__": "cc.SpriteFrame"
     }
   },

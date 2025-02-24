@@ -1,17 +1,18 @@
 import gc from "@sg/game-client-base";
 import { _decorator, Label, Layout } from "cc";
 import { LedLightTooltip } from "db://shared-components/game/led-light/scripts/components/led-light-tooltip";
+
 const { ccclass, property } = _decorator;
 
-@ccclass("sicbo_led_light_tooltip")
-export class SicboLedLightTooltip extends LedLightTooltip {
+@ccclass("game_led_light_tooltip")
+export class GameLedLightTooltip extends LedLightTooltip {
     @property({ type: Label })
     diceList: Label[] = [];
 
     @property(Layout)
     layoutResult: Layout = null;
 
-    private mainChoice = ["anyTriple", "big", "small"];
+    private mainChoice = ["big", "small"];
 
     public setTooltipInfo(ledLightInfo: gc.RoundHistories.RoundHistory) {
         const { roundId, result, settlementResult } = ledLightInfo;

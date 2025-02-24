@@ -392,7 +392,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -69.22314453125,
+      "x": -33.8251953125,
       "y": -2,
       "z": 0
     },
@@ -433,7 +433,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 87.98583984375,
+      "width": 21.9873046875,
       "height": 22.68
     },
     "_anchorPoint": {
@@ -469,7 +469,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Bộ ba bất kỳ",
+    "_string": "Tài",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 15,
@@ -588,7 +588,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 69.22314453125,
+      "x": 33.8251953125,
       "y": -2,
       "z": 0
     },
@@ -1623,7 +1623,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150.4462890625,
+      "width": 79.650390625,
       "height": 25
     },
     "_anchorPoint": {

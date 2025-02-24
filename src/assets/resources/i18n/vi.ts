@@ -206,7 +206,9 @@ export const languages = {
     },
     "BigSmall": {
         "glossary_big": "Tài",
-        "glossary_small": "Xỉu"
+        "glossary_small": "Xỉu",
+        "scoreboard_big": "T",
+        "scoreboard_small": "X"
     }
 };
 

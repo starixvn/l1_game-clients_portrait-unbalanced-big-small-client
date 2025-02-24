@@ -1,9 +1,9 @@
 import gc from "@sg/game-client-base";
 import { _decorator, Color, Component, Label, Node, Sprite, SpriteAtlas } from "cc";
+
 const { ccclass, property } = _decorator;
 
 const enum Choice {
-    anyTriple = "anyTriple",
     big = "big",
     small = "small",
 }
@@ -25,8 +25,8 @@ export class RoundResultItem extends Component {
     @property(SpriteAtlas)
     mainAtlas: SpriteAtlas = null;
 
-    private mainChoice = ["anyTriple", "big", "small"];
-    private choiceColors = ["ffc514", "ff4848", "3a8eff"];
+    private mainChoice = ["big", "small"];
+    private choiceColors = ["ff4848", "3a8eff"];
 
     setData(data: any) {
         const { result, settlementResult } = data;
@@ -40,7 +40,7 @@ export class RoundResultItem extends Component {
         let totalPoint = 0;
         Object.keys(result).forEach((key) => {
             const dice = this.dices.find((item) => item.name === key);
-            dice.getComponent(Sprite).spriteFrame = this.mainAtlas.getSpriteFrame(`dice-${result[key]}`);
+            dice.getComponent(Sprite).spriteFrame = this.mainAtlas.getSpriteFrame(`scoreboard-xx${result[key]}`);
             totalPoint += result[key];
         });
         this.lblTotalPoint.string = totalPoint.toString();
