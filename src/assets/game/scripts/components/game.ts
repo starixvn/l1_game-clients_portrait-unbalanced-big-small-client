@@ -72,7 +72,7 @@ export default class Game extends GameComponent {
                 this.playSound("dice_shake");
                 await this.resultComp.showResultAnim(this.prevResult, result, this.currentRoundId);
             } else {
-                this.resultComp?.showResultNoAnim(result, this.currentRoundId);
+                //this.resultComp?.showResultNoAnim(result, this.currentRoundId);
             }
 
             this.isAnimatingResult = false;

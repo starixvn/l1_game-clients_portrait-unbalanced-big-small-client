@@ -1,29 +1,18 @@
 import gc from "@sg/game-client-base";
-import { _decorator, Label, Node, sp, SpriteAtlas, SpriteFrame, tween, UIOpacity, v3 } from "cc";
+import { _decorator, Label, Node, Sprite, SpriteAtlas, tween, UIOpacity, v3 } from "cc";
 import { ObserverComponent } from "db://shared-components/shared/common-components/observer-component/scripts/observer-component";
 import { AnimationUtils } from "db://shared-components/shared/utils/utils";
 import Observer from "observer";
-
-import { ResultDice } from "./result-dice";
 
 const { ccclass, property } = _decorator;
 const { render } = Observer;
 
 const { Rounds, Translator } = gc;
 
-interface IResultDiceFrames {
-    dice1: SpriteFrame[];
-    dice2: SpriteFrame[];
-    dice3: SpriteFrame[];
-}
-
 @ccclass("GameResult")
 export class GameResult extends ObserverComponent {
-    @property(ResultDice)
-    dicesComponent: ResultDice[] = [];
-
-    @property(sp.Skeleton)
-    diceSkeleton: sp.Skeleton = null;
+    @property({ type: Sprite })
+    dices: Sprite[] = [];
 
     @property(SpriteAtlas)
     diceAtlas: SpriteAtlas = null;
@@ -34,50 +23,22 @@ export class GameResult extends ObserverComponent {
     @property(Label)
     lblResult: Label = null;
 
-    private resultDiceFrames: IResultDiceFrames;
-    private diceSpriteFrames: SpriteFrame[] = [];
-    private readonly DICE_POSITION_NUMBER = 7;
-    private readonly LOOP_NUMBER = 2;
-    private readonly DICE_END_FRAME = 11;
-    private readonly RESULT_DURATION = 1.4;
+    private readonly RESULT_DURATION = 2;
 
     onLoad() {
         this.setResultTextVisibility(false);
-        this.resetResultDiceFrames();
-        this.initDiceSpriteFrames();
         super.onLoad();
     }
 
-    private initDiceSpriteFrames() {
-        this.diceSpriteFrames = this.diceAtlas.getSpriteFrames();
-        this.diceSpriteFrames.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
-    }
-
-    private resetResultDiceFrames() {
-        this.resultDiceFrames = { dice1: [], dice2: [], dice3: [] };
-    }
-
-    private stopAllDiceAnimation() {
-        this.dicesComponent.forEach((dice) => dice.stopAnimation());
-    }
-
-    private getDiceAnimationName(roundId: number): string {
-        const position = roundId % this.DICE_POSITION_NUMBER || this.DICE_POSITION_NUMBER;
-        const nextPosition = (position % this.DICE_POSITION_NUMBER) + 1;
-
-        console.log("getDiceAnimationName", `s${position}-e${nextPosition}`);
-        return `s${position}-e${nextPosition}`;
-    }
-
-    showResultNoAnim(result: any, roundId: number) {
-        this.stopAllDiceAnimation();
-        this.diceSkeleton && AnimationUtils.pauseSpineAnimation(this.diceSkeleton, 1, this.getDiceAnimationName(roundId));
-        this.dicesComponent.forEach((dice, index) => {
-            const endPos = result[`dice${index + 1}`];
-            const frame = this.diceSpriteFrames.find((spriteFrame) => spriteFrame.name === `end-${endPos}-${this.DICE_END_FRAME}`);
-            dice.setFrame(frame);
-        });
-    }
+    // showResultNoAnim(result: any, roundId: number) {
+    //     this.stopAllDiceAnimation();
+    //     this.diceSkeleton && AnimationUtils.pauseSpineAnimation(this.diceSkeleton, 1, this.getDiceAnimationName(roundId));
+    //     this.dicesComponent.forEach((dice, index) => {
+    //         const endPos = result[`dice${index + 1}`];
+    //         const frame = this.diceSpriteFrames.find((spriteFrame) => spriteFrame.name === `end-${endPos}-${this.DICE_END_FRAME}`);
+    //         dice.setFrame(frame);
+    //     });
+    // }
 
     @render(Rounds.RoundTimeStore, (store) => store.isStartingRound)
     hideResultText(isStartingRound: boolean) {
@@ -115,8 +76,8 @@ export class GameResult extends ObserverComponent {
         return ["dice1", "dice2", "dice3"].map((key) => result[key]).reduce((sum, value) => sum + value, 0);
     }
 
-    determineWinningChoice(totalPoints: number): string {
-        const winChoice = totalPoints > 6 ? "SicBo.glossary_big" : "SicBo.glossary_small";
+    determineWinningChoice(totalPoints: number) {
+        const winChoice = totalPoints > 6 ? "BigSmall.glossary_big" : "BigSmall.glossary_small";
         return `${totalPoints} - ${Translator.translate(winChoice)}`;
     }
 
@@ -129,13 +90,13 @@ export class GameResult extends ObserverComponent {
     }
 
     async showResultAnim(prevResult: any, result: any, roundId: number) {
-        this.resetResultDiceFrames();
-        this.stopAllDiceAnimation();
-        this.setResultDiceFrames(prevResult, result);
-        this.diceSkeleton && AnimationUtils.playSpine(this.diceSkeleton, this.getDiceAnimationName(roundId), false, this.RESULT_DURATION);
-        this.dicesComponent.forEach((dice, index) => {
-            dice.runAnimation(this.resultDiceFrames[`dice${index + 1}`], this.RESULT_DURATION);
-        });
+        //this.resetResultDiceFrames();
+        //this.stopAllDiceAnimation();
+        this.setResultDiceFrames(result);
+        //this.diceSkeleton && AnimationUtils.playSpine(this.diceSkeleton, this.getDiceAnimationName(roundId), false, this.RESULT_DURATION);
+        // this.dicesComponent.forEach((dice, index) => {
+        //     dice.runAnimation(this.resultDiceFrames[`dice${index + 1}`], this.RESULT_DURATION);
+        // });
         await AnimationUtils.delayTime(this.RESULT_DURATION);
         this.showResultText(result);
     }
@@ -144,16 +105,14 @@ export class GameResult extends ObserverComponent {
         return Math.floor(Math.random() * max) + 1;
     }
 
-    private setResultDiceFrames(prevResult: any, result: any) {
-        for (let i = 0; i < this.dicesComponent.length; i++) {
-            const startPos = prevResult[`dice${i + 1}`];
-            const endPos = result[`dice${i + 1}`];
-            const files = [`start-${startPos}`, `loop-${this.getRandomNumber(this.LOOP_NUMBER)}`, `end-${endPos}`];
+    private setResultDiceFrames(result: any) {
+        const { dice1, dice2, dice3 } = result;
+        this.dices[0].spriteFrame = this.diceAtlas.getSpriteFrame(`${dice1}-goc-2`);
+        this.dices[1].spriteFrame = this.diceAtlas.getSpriteFrame(`${dice2}-goc-1`);
+        this.dices[2].spriteFrame = this.diceAtlas.getSpriteFrame(`${dice3}-goc-1`);
+    }
 
-            for (const file of files) {
-                const matchingFrames = this.diceSpriteFrames.filter((frame) => frame.name.startsWith(file));
-                this.resultDiceFrames[`dice${i + 1}`].push(...matchingFrames);
-            }
-        }
+    setVisibilityDices(isShow: false) {
+        this.dices.forEach((dice) => (dice.node.active = isShow));
     }
 }
