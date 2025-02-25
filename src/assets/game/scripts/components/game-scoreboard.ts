@@ -1,12 +1,13 @@
 import { _decorator, Layout, Node, ScrollView, Sprite, SpriteAtlas, UITransform } from "cc";
 import { ObserverComponent } from "db://shared-components/shared/common-components/observer-component/scripts/observer-component";
 import Observer from "observer";
+
 const { handle, render } = Observer;
 
 const { ccclass, property } = _decorator;
 
 @ccclass()
-export class SicboScoreBoard extends ObserverComponent {
+export class GameScoreBoard extends ObserverComponent {
     @property(Node)
     nodeDiceStatistic: Node = null;
 
