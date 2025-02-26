@@ -1,9 +1,10 @@
 {
-"skeleton": { "hash": "/qGd2hnUlMt9xB/E+MXB3caiPls", "spine": "3.8.99", "x": 34.5, "y": -361.46, "width": 270, "height": 270 },
+"skeleton": { "hash": "eagAextjQM837s279WOFjrcsPqs", "spine": "3.8.99" },
 "bones": [
-	{ "name": "root" },
-	{ "name": "bet-option-up-bgwinning", "parent": "root" },
-	{ "name": "vfx", "parent": "root" },
+	{ "name": "root", "y": 1.71 },
+	{ "name": "bet-option", "parent": "root", "y": -1.71 },
+	{ "name": "bet-option-main-bgwinning", "parent": "bet-option", "y": 1.71 },
+	{ "name": "vfx", "parent": "bet-option", "x": -53.01, "y": -10.26 },
 	{ "name": "stars", "parent": "vfx" },
 	{ "name": "star-const", "parent": "stars", "length": 108.87, "rotation": 65.28, "x": -0.13, "y": -0.6 },
 	{ "name": "move", "parent": "star-const", "rotation": -90.22, "x": 0.6, "y": 0.62 },
@@ -74,7 +75,7 @@
 	{ "name": "rotate19", "parent": "move19", "x": 1.38, "y": -0.6 }
 ],
 "slots": [
-	{ "name": "bet-option-up-bgwinning", "bone": "bet-option-up-bgwinning" },
+	{ "name": "bet-option-main", "bone": "bet-option-main-bgwinning" },
 	{ "name": "vfx-star", "bone": "rotate" },
 	{ "name": "vfx-star2", "bone": "rotate2" },
 	{ "name": "vfx-star12", "bone": "rotate12" },
@@ -94,8 +95,8 @@
 	{
 		"name": "default",
 		"attachments": {
-			"bet-option-up-bgwinning": {
-				"bet-option-up-bgwinning": { "width": 244, "height": 257 }
+			"bet-option-main": {
+				"bet-option-main": { "width": 367, "height": 417 }
 			},
 			"vfx-star": {
 				"vfx-star": { "width": 37, "height": 40 }
@@ -145,7 +146,7 @@
 "animations": {
 	"show": {
 		"slots": {
-			"bet-option-up-bgwinning": {
+			"bet-option-main": {
 				"color": [
 					{ "color": "ffffff32", "curve": 0.25, "c3": 0.75 },
 					{ "time": 0.2333, "color": "fffffffa", "curve": 0.25, "c3": 0.75 },
@@ -154,7 +155,7 @@
 					{ "time": 1, "color": "ffffff32" }
 				],
 				"attachment": [
-					{ "name": "bet-option-up-bgwinning" }
+					{ "name": "bet-option-main" }
 				]
 			},
 			"vfx-star": {
