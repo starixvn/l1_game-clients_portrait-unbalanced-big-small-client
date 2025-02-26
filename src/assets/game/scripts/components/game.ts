@@ -111,18 +111,19 @@ export default class Game extends GameComponent {
             this.showResult(result, false, settlementResult);
         }
         const chips = this.parseChipsFromTotalBets(this.totalBets);
-        for (const betItem of this.chipFlying.betItems.betItemComponents) {
-            const chipGroup = chips[betItem.betChoice];
-            if (chipGroup) {
-                const nodes = addChipsToChipBoxWhenJoinRoom(
-                    this.chipFlying.chipContainer,
-                    betItem.chipBox,
-                    chipGroup,
-                    this.chipFlying.slidingChip
-                );
-                this.chipFlying.addChipsToBoxWithChoice(nodes, betItem.betChoice);
+        if (chips)
+            for (const betItem of this.chipFlying.betItems.betItemComponents) {
+                const chipGroup = chips[betItem.betChoice];
+                if (chipGroup) {
+                    const nodes = addChipsToChipBoxWhenJoinRoom(
+                        this.chipFlying.chipContainer,
+                        betItem.chipBox,
+                        chipGroup,
+                        this.chipFlying.slidingChip
+                    );
+                    this.chipFlying.addChipsToBoxWithChoice(nodes, betItem.betChoice);
+                }
             }
-        }
     }
 
     @render(Rounds.RoundTimeStore, (store) => store.roundState)
@@ -140,7 +141,6 @@ export default class Game extends GameComponent {
             return;
         }
         this.totalBets = totalBets;
-        console.log("totalBets", this.totalBets);
     }
 
     @render(gc.Chips.ChipStore, (store) => store.chipValuesByStakeLevel)
@@ -152,7 +152,7 @@ export default class Game extends GameComponent {
         if (!totalBets) {
             return;
         }
-        let chips = {};
+        let chips = null;
         Object.keys(totalBets).forEach((choice) => {
             const betChoiceData = {};
             const totalBetChoice = totalBets[choice];
