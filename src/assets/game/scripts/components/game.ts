@@ -111,7 +111,7 @@ export default class Game extends GameComponent {
             this.showResult(result, false, settlementResult);
         }
         const chips = this.parseChipsFromTotalBets(this.totalBets);
-        if (chips)
+        if (Object.keys(chips).length > 0) {
             for (const betItem of this.chipFlying.betItems.betItemComponents) {
                 const chipGroup = chips[betItem.betChoice];
                 if (chipGroup) {
@@ -124,6 +124,7 @@ export default class Game extends GameComponent {
                     this.chipFlying.addChipsToBoxWithChoice(nodes, betItem.betChoice);
                 }
             }
+        }
     }
 
     @render(Rounds.RoundTimeStore, (store) => store.roundState)
@@ -152,7 +153,7 @@ export default class Game extends GameComponent {
         if (!totalBets) {
             return;
         }
-        let chips = null;
+        let chips = {};
         Object.keys(totalBets).forEach((choice) => {
             const betChoiceData = {};
             const totalBetChoice = totalBets[choice];
