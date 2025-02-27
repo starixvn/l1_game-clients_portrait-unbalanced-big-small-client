@@ -1,0 +1,48 @@
+
+shake-dia.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Down 2
+  rotate: false
+  xy: 872, 58
+  size: 171, 165
+  orig: 171, 165
+  offset: 0, 0
+  index: -1
+Normal
+  rotate: false
+  xy: 473, 24
+  size: 205, 199
+  orig: 205, 199
+  offset: 0, 0
+  index: -1
+Up 2
+  rotate: false
+  xy: 2, 2
+  size: 243, 221
+  orig: 243, 221
+  offset: 0, 0
+  index: -1
+bowl
+  rotate: false
+  xy: 1045, 59
+  size: 164, 164
+  orig: 164, 164
+  offset: 0, 0
+  index: -1
+dish
+  rotate: false
+  xy: 680, 40
+  size: 190, 183
+  orig: 190, 183
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 247, 20
+  size: 224, 203
+  orig: 224, 203
+  offset: 0, 0
+  index: -1

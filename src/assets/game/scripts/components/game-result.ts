@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { _decorator, Label, Node, Sprite, SpriteAtlas, tween, UIOpacity, v3 } from "cc";
+import { _decorator, Label, Node, sp, Sprite, SpriteAtlas, tween, UIOpacity, v3 } from "cc";
 import { ObserverComponent } from "db://shared-components/shared/common-components/observer-component/scripts/observer-component";
 import { AnimationUtils } from "db://shared-components/shared/utils/utils";
 import Observer from "observer";
@@ -23,6 +23,9 @@ export class GameResult extends ObserverComponent {
     @property(Label)
     lblResult: Label = null;
 
+    @property(sp.Skeleton)
+    skeletonDice: sp.Skeleton = null;
+
     private readonly RESULT_DURATION = 2;
 
     onLoad() {
@@ -30,20 +33,18 @@ export class GameResult extends ObserverComponent {
         super.onLoad();
     }
 
-    // showResultNoAnim(result: any, roundId: number) {
-    //     this.stopAllDiceAnimation();
-    //     this.diceSkeleton && AnimationUtils.pauseSpineAnimation(this.diceSkeleton, 1, this.getDiceAnimationName(roundId));
-    //     this.dicesComponent.forEach((dice, index) => {
-    //         const endPos = result[`dice${index + 1}`];
-    //         const frame = this.diceSpriteFrames.find((spriteFrame) => spriteFrame.name === `end-${endPos}-${this.DICE_END_FRAME}`);
-    //         dice.setFrame(frame);
-    //     });
-    // }
+    showResultNoAnim(prevResult: any, result: any, roundId: number) {
+        this.skeletonDice && (this.skeletonDice.node.active = false);
+        this.showResultText(result);
+    }
 
     @render(Rounds.RoundTimeStore, (store) => store.isStartingRound)
-    hideResultText(isStartingRound: boolean) {
-        if (isStartingRound) {
+    async hideResultText(isStartingRound: boolean) {
+        if (isStartingRound && this.skeletonDice) {
             this.setResultTextVisibility(false);
+            this.skeletonDice.node.active = true;
+            await AnimationUtils.playSpine(this.skeletonDice, "close", false);
+            AnimationUtils.playSpine(this.skeletonDice, "shake", false);
         }
     }
 
@@ -93,11 +94,7 @@ export class GameResult extends ObserverComponent {
         //this.resetResultDiceFrames();
         //this.stopAllDiceAnimation();
         this.setResultDiceFrames(result);
-        //this.diceSkeleton && AnimationUtils.playSpine(this.diceSkeleton, this.getDiceAnimationName(roundId), false, this.RESULT_DURATION);
-        // this.dicesComponent.forEach((dice, index) => {
-        //     dice.runAnimation(this.resultDiceFrames[`dice${index + 1}`], this.RESULT_DURATION);
-        // });
-        await AnimationUtils.delayTime(this.RESULT_DURATION);
+        this.skeletonDice && (await AnimationUtils.playSpine(this.skeletonDice, "open", false));
         this.showResultText(result);
     }
 

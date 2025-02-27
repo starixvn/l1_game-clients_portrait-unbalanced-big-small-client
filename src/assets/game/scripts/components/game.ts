@@ -1,3 +1,4 @@
+import { AnimationUtils } from "db://shared-components/shared/utils/utils";
 import "./../../../resources/i18n";
 
 import gc from "@sg/game-client-base";
@@ -75,7 +76,7 @@ export default class Game extends GameComponent {
                 this.playSound("dice_shake");
                 await this.resultComp.showResultAnim(this.prevResult, result, this.currentRoundId);
             } else {
-                //this.resultComp?.showResultNoAnim(result, this.currentRoundId);
+                this.resultComp?.showResultNoAnim(this.prevResult, result, this.currentRoundId);
             }
 
             this.isAnimatingResult = false;
@@ -106,10 +107,15 @@ export default class Game extends GameComponent {
         }
 
         const lastRound = firstJoinGameHistory.roundHistory as any;
-        if (lastRound) {
-            const { result, settlementResult } = lastRound;
-            this.showResult(result, false, settlementResult);
+        if (firstJoinGameHistory.staticHighlight) {
+            this.resultComp.skeletonDice && AnimationUtils.playSpine(this.resultComp.skeletonDice, "idle", true);
+        } else {
+            if (lastRound) {
+                const { result, settlementResult } = lastRound;
+                this.showResult(result, false, settlementResult);
+            }
         }
+
         const chips = this.parseChipsFromTotalBets(this.totalBets);
         if (Object.keys(chips).length > 0) {
             for (const betItem of this.chipFlying.betItems.betItemComponents) {
