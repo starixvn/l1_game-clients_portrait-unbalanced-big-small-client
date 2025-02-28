@@ -33,7 +33,7 @@ export class GameResult extends ObserverComponent {
         super.onLoad();
     }
 
-    showResultNoAnim(prevResult: any, result: any, roundId: number) {
+    showResultNoAnim(prevResult: any, result: any) {
         this.skeletonDice && (this.skeletonDice.node.active = false);
         this.showResultText(result);
     }
@@ -91,15 +91,9 @@ export class GameResult extends ObserverComponent {
     }
 
     async showResultAnim(prevResult: any, result: any, roundId: number) {
-        //this.resetResultDiceFrames();
-        //this.stopAllDiceAnimation();
         this.setResultDiceFrames(result);
         this.skeletonDice && (await AnimationUtils.playSpine(this.skeletonDice, "open", false));
         this.showResultText(result);
-    }
-
-    private getRandomNumber(max: number): number {
-        return Math.floor(Math.random() * max) + 1;
     }
 
     private setResultDiceFrames(result: any) {
@@ -107,9 +101,5 @@ export class GameResult extends ObserverComponent {
         this.dices[0].spriteFrame = this.diceAtlas.getSpriteFrame(`${dice1}-goc-2`);
         this.dices[1].spriteFrame = this.diceAtlas.getSpriteFrame(`${dice2}-goc-1`);
         this.dices[2].spriteFrame = this.diceAtlas.getSpriteFrame(`${dice3}-goc-1`);
-    }
-
-    setVisibilityDices(isShow: false) {
-        this.dices.forEach((dice) => (dice.node.active = isShow));
     }
 }

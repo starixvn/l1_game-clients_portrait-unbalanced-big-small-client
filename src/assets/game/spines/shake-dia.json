@@ -1,12 +1,12 @@
 {
-"skeleton": { "hash": "dZJG8VrqZ/K1H85ZqV1PE5xx2rI", "spine": "3.8.99" },
+"skeleton": { "hash": "Esdng3RTsIV9Z1EI+SZItnsNVRo", "spine": "3.8.99" },
 "bones": [
 	{ "name": "root" },
 	{ "name": "shaking-dia", "parent": "root" },
 	{ "name": "shake-dia", "parent": "shaking-dia" },
 	{ "name": "shaking", "parent": "shake-dia", "scaleX": 1.1, "scaleY": 1.1 },
 	{ "name": "open-dia", "parent": "shaking-dia" },
-	{ "name": "dish", "parent": "open-dia", "scaleX": 1.1, "scaleY": 1.1 },
+	{ "name": "dish", "parent": "open-dia", "y": 0.44, "scaleX": 1.1, "scaleY": 1.1 },
 	{ "name": "bowl", "parent": "open-dia", "y": 0.75, "scaleX": 1.1, "scaleY": 1.1 },
 	{ "name": "shadow", "parent": "bowl", "y": -3.01 },
 	{ "name": "shadow2", "parent": "shaking", "y": -3.01 },
@@ -55,11 +55,6 @@
 			"bowl": {
 				"attachment": [
 					{ "name": "bowl" }
-				]
-			},
-			"dish": {
-				"attachment": [
-					{ "name": "dish" }
 				]
 			},
 			"shadow": {
@@ -135,11 +130,6 @@
 				],
 				"attachment": [
 					{ "name": "bowl" }
-				]
-			},
-			"dish": {
-				"attachment": [
-					{ "name": "dish" }
 				]
 			},
 			"shadow": {
