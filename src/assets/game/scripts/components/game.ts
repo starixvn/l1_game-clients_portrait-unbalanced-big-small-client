@@ -74,11 +74,11 @@ export default class Game extends GameComponent {
             this.isAnimatingResult = true;
 
             if (hasAnimation) {
-                await this.resultComp.showResultAnim(this.prevResult, result, this.currentRoundId);
+                await this.resultComp.showResultAnim(result, settlementResult);
                 const winChoice = this.soundWinChoice.find((choice) => settlementResult[choice]);
                 this.playSound(`${winChoice}-${gc.Translator.getLanguageId()}`);
             } else {
-                this.resultComp?.showResultNoAnim(this.prevResult, result);
+                this.resultComp?.showResultNoAnim(result, settlementResult);
             }
 
             this.isAnimatingResult = false;

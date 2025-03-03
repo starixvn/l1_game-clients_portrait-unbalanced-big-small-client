@@ -1,6 +1,7 @@
 import gc from "@sg/game-client-base";
 import { _decorator, Label, Node, sp, Sprite, SpriteAtlas, tween, UIOpacity, v3 } from "cc";
 import { ObserverComponent } from "db://shared-components/shared/common-components/observer-component/scripts/observer-component";
+import { FunctionUtils } from "db://shared-components/shared/utils";
 import { AnimationUtils } from "db://shared-components/shared/utils/utils";
 import Observer from "observer";
 
@@ -26,7 +27,7 @@ export class GameResult extends ObserverComponent {
     @property(sp.Skeleton)
     skeletonDice: sp.Skeleton = null;
 
-    private readonly RESULT_DURATION = 2;
+    private readonly RESULT_DURATION = 2000;
     private readonly soundDiceShake = "dice_shake";
 
     onLoad() {
@@ -34,9 +35,9 @@ export class GameResult extends ObserverComponent {
         super.onLoad();
     }
 
-    showResultNoAnim(prevResult: any, result: any) {
+    showResultNoAnim(result: any, settlementResult: any) {
         this.skeletonDice && (this.skeletonDice.node.active = false);
-        this.showResultText(result);
+        this.showResultText(result, settlementResult);
     }
 
     @render(Rounds.RoundTimeStore, (store) => store.isStartingRound)
@@ -82,8 +83,8 @@ export class GameResult extends ObserverComponent {
             .start();
     }
 
-    showResultText(result: any) {
-        const choiceWin = this.determineWinningChoice(this.calcTotalPoints(result));
+    showResultText(result: any, settlementResult: any) {
+        const choiceWin = this.determineWinningChoice(result, settlementResult);
         this.setResultText(choiceWin.toUpperCase());
         this.setResultTextVisibility(true);
     }
@@ -92,9 +93,10 @@ export class GameResult extends ObserverComponent {
         return ["dice1", "dice2", "dice3"].map((key) => result[key]).reduce((sum, value) => sum + value, 0);
     }
 
-    determineWinningChoice(totalPoints: number) {
-        const winChoice = totalPoints > 6 ? "BigSmall.glossary_big" : "BigSmall.glossary_small";
-        return `${totalPoints} - ${Translator.translate(winChoice)}`;
+    determineWinningChoice(result: any, settlementResult: any) {
+        const totalPoint = this.calcTotalPoints(result);
+        const winChoice = ["big", "small"].find((choice) => settlementResult[choice]);
+        return `${totalPoint} - ${Translator.translate(winChoice === "big" ? "BigSmall.glossary_big" : "BigSmall.glossary_small")}`;
     }
 
     setResultText(value: string) {
@@ -105,10 +107,11 @@ export class GameResult extends ObserverComponent {
         this.lblResult.string = value;
     }
 
-    async showResultAnim(prevResult: any, result: any, roundId: number) {
+    async showResultAnim(result: any, settlementResult: any) {
         this.setResultDiceFrames(result);
-        this.skeletonDice && (await AnimationUtils.playSpine(this.skeletonDice, "open", false));
-        this.showResultText(result);
+        this.skeletonDice && AnimationUtils.playSpine(this.skeletonDice, "open", false);
+        await FunctionUtils.delay(this.RESULT_DURATION);
+        this.showResultText(result, settlementResult);
     }
 
     private setResultDiceFrames(result: any) {
