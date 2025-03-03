@@ -41,6 +41,7 @@ export default class Game extends GameComponent {
     private currentRoundId: number;
     private totalBets: gc.GameServiceMessage.TotalBets = null;
     private chipsByStakeLevel = [];
+    private soundWinChoice = ["big", "small"];
 
     onLoad() {
         this.audioContainer = this.nodeAudioContainer.getComponent(AudioContainer);
@@ -73,8 +74,9 @@ export default class Game extends GameComponent {
             this.isAnimatingResult = true;
 
             if (hasAnimation) {
-                this.playSound("dice_shake");
                 await this.resultComp.showResultAnim(this.prevResult, result, this.currentRoundId);
+                const winChoice = this.soundWinChoice.find((choice) => settlementResult[choice]);
+                this.playSound(`${winChoice}-${gc.Translator.getLanguageId()}`);
             } else {
                 this.resultComp?.showResultNoAnim(this.prevResult, result);
             }

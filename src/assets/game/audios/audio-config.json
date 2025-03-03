@@ -3,5 +3,65 @@
         "bundle": "resources",
         "path": "dice_shake",
         "isLazyLoad": true
+    },
+    "big-en": {
+        "bundle": "resources",
+        "path": "winning/big_win_en",
+        "isLazyLoad": true
+    },
+    "small-en": {
+        "bundle": "resources",
+        "path": "winning/small_win_en",
+        "isLazyLoad": true
+    },
+    "big-vi": {
+        "bundle": "resources",
+        "path": "winning/big_win_vi",
+        "isLazyLoad": true
+    },
+    "small-vi": {
+        "bundle": "resources",
+        "path": "winning/small_win_vi",
+        "isLazyLoad": true
+    },
+    "big-id": {
+        "bundle": "resources",
+        "path": "winning/big_win_id",
+        "isLazyLoad": true
+    },
+    "small-id": {
+        "bundle": "resources",
+        "path": "winning/small_win_id",
+        "isLazyLoad": true
+    },
+    "big-th": {
+        "bundle": "resources",
+        "path": "winning/big_win_th",
+        "isLazyLoad": true
+    },
+    "small-th": {
+        "bundle": "resources",
+        "path": "winning/small_win_th",
+        "isLazyLoad": true
+    },
+    "big-zh_cn": {
+        "bundle": "resources",
+        "path": "winning/big_win_zh_cn",
+        "isLazyLoad": true
+    },
+    "small-zh_cn": {
+        "bundle": "resources",
+        "path": "winning/small_win_zh_cn",
+        "isLazyLoad": true
+    },
+    "big-zh_tw": {
+        "bundle": "resources",
+        "path": "winning/big_win_zh_tw",
+        "isLazyLoad": true
+    },
+    "small-zh_tw": {
+        "bundle": "resources",
+        "path": "winning/small_win_zh_tw",
+        "isLazyLoad": true
     }
 }

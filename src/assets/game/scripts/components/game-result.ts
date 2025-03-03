@@ -5,7 +5,7 @@ import { AnimationUtils } from "db://shared-components/shared/utils/utils";
 import Observer from "observer";
 
 const { ccclass, property } = _decorator;
-const { render } = Observer;
+const { render, handle } = Observer;
 
 const { Rounds, Translator } = gc;
 
@@ -27,6 +27,7 @@ export class GameResult extends ObserverComponent {
     skeletonDice: sp.Skeleton = null;
 
     private readonly RESULT_DURATION = 2;
+    private readonly soundDiceShake = "dice_shake";
 
     onLoad() {
         this.setResultTextVisibility(false);
@@ -44,6 +45,7 @@ export class GameResult extends ObserverComponent {
             this.setResultTextVisibility(false);
             this.skeletonDice.node.active = true;
             await AnimationUtils.playSpine(this.skeletonDice, "close", false);
+            this.playSound(this.soundDiceShake);
             AnimationUtils.playSpine(this.skeletonDice, "shake", false);
         }
     }
@@ -114,5 +116,10 @@ export class GameResult extends ObserverComponent {
         this.dices[0].spriteFrame = this.diceAtlas.getSpriteFrame(`${dice1}-goc-2`);
         this.dices[1].spriteFrame = this.diceAtlas.getSpriteFrame(`${dice2}-goc-1`);
         this.dices[2].spriteFrame = this.diceAtlas.getSpriteFrame(`${dice3}-goc-1`);
+    }
+
+    @handle(gc.Audios.AudioHandler, (handle, id: string) => handle.playSFX(id))
+    playSound(id: string) {
+        return id;
     }
 }
