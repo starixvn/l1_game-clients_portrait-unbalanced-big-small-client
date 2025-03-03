@@ -52,8 +52,6 @@ export class GameResult extends ObserverComponent {
     handlePlacingBet(isPlacingBet: boolean) {
         if (isPlacingBet && this.skeletonDice) {
             this.setResultTextVisibility(false);
-            AnimationUtils.pauseSpineAnimation(this.skeletonDice, 1, "close");
-            AnimationUtils.pauseSpineAnimation(this.skeletonDice, 1, "shake");
             AnimationUtils.playSpine(this.skeletonDice, "idle", true);
         }
     }
