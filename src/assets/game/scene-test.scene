@@ -23,7 +23,7 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 31
+      "__id__": 16
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -54,7 +54,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 94
+      "__id__": 79
     },
     "_id": "9d816c40-a12a-4cc9-aa14-485528b13544"
   },
@@ -77,20 +77,20 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 28
+        "__id__": 13
       },
       {
-        "__id__": 29
+        "__id__": 14
       },
       {
-        "__id__": 30
+        "__id__": 15
       }
     ],
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 414,
-      "y": 539,
+      "x": 378,
+      "y": 672,
       "z": 0
     },
     "_lrot": {
@@ -175,7 +175,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 539,
+    "_orthoHeight": 672,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -224,35 +224,19 @@
       "__id__": 5
     },
     "asset": {
-      "__uuid__": "e8589c96-a378-4f1c-bd58-1915e70a06d1",
+      "__uuid__": "9da77c1a-a29d-49d1-a29c-9fdf6b184653",
       "__expectedType__": "cc.Prefab"
     },
-    "fileId": "74heiL71RGzqfXYaHTTdVc",
+    "fileId": "d4zQ/Gv4RCso18nnSep6BH",
     "instance": {
       "__id__": 7
     },
-    "targetOverrides": [
-      {
-        "__id__": 13
-      },
-      {
-        "__id__": 16
-      },
-      {
-        "__id__": 19
-      },
-      {
-        "__id__": 22
-      },
-      {
-        "__id__": 25
-      }
-    ],
+    "targetOverrides": [],
     "nestedPrefabInstanceRoots": null
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "6aG3PItHhOd6Hh6mCj/qA+",
+    "fileId": "5fGa7UdvxN06Io61cSjIuB",
     "prefabRootNode": null,
     "mountedChildren": [],
     "mountedComponents": [],
@@ -280,12 +264,12 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "score-board"
+    "value": "result"
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "74heiL71RGzqfXYaHTTdVc"
+      "d4zQ/Gv4RCso18nnSep6BH"
     ]
   },
   {
@@ -298,8 +282,8 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -11.363,
-      "y": 432.76,
+      "x": 0,
+      "y": 0,
       "z": 0
     }
   },
@@ -335,136 +319,6 @@
     }
   },
   {
-    "__type__": "cc.TargetOverrideInfo",
-    "source": null,
-    "sourceInfo": {
-      "__id__": 14
-    },
-    "propertyPath": [
-      "scrollView"
-    ],
-    "target": null,
-    "targetInfo": {
-      "__id__": 15
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "a98rnsCtdJSKZsxuKzxFwf"
-    ]
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "c4YakEyClN8I0hLn1KxY6E"
-    ]
-  },
-  {
-    "__type__": "cc.TargetOverrideInfo",
-    "source": null,
-    "sourceInfo": {
-      "__id__": 17
-    },
-    "propertyPath": [
-      "layout"
-    ],
-    "target": null,
-    "targetInfo": {
-      "__id__": 18
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "a98rnsCtdJSKZsxuKzxFwf"
-    ]
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "fa942oRoVFf5z0/uvQm/ii"
-    ]
-  },
-  {
-    "__type__": "cc.TargetOverrideInfo",
-    "source": null,
-    "sourceInfo": {
-      "__id__": 20
-    },
-    "propertyPath": [
-      "grid"
-    ],
-    "target": null,
-    "targetInfo": {
-      "__id__": 21
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "49uYIItH1H8II3v+Xo6Hf8"
-    ]
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "a98rnsCtdJSKZsxuKzxFwf"
-    ]
-  },
-  {
-    "__type__": "cc.TargetOverrideInfo",
-    "source": null,
-    "sourceInfo": {
-      "__id__": 23
-    },
-    "propertyPath": [
-      "target"
-    ],
-    "target": null,
-    "targetInfo": {
-      "__id__": 24
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "63xk9IJZ9JaK89tQnrMk/0"
-    ]
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "ffh1UyIaBGNZb16r2QfZey"
-    ]
-  },
-  {
-    "__type__": "cc.TargetOverrideInfo",
-    "source": null,
-    "sourceInfo": {
-      "__id__": 26
-    },
-    "propertyPath": [
-      "target"
-    ],
-    "target": null,
-    "targetInfo": {
-      "__id__": 27
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "1fZfWJwn1JbqZBuhhtP7z2"
-    ]
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "ffh1UyIaBGNZb16r2QfZey"
-    ]
-  },
-  {
     "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
@@ -476,8 +330,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 827.9999999999998,
-      "height": 1078
+      "width": 755.9999999999998,
+      "height": 1344
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -540,7 +394,7 @@
     "instance": null,
     "targetOverrides": [
       {
-        "__id__": 32
+        "__id__": 17
       }
     ],
     "nestedPrefabInstanceRoots": [
@@ -552,7 +406,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 33
+      "__id__": 18
     },
     "sourceInfo": null,
     "propertyPath": [
@@ -560,7 +414,7 @@
     ],
     "target": null,
     "targetInfo": {
-      "__id__": 93
+      "__id__": 78
     }
   },
   {
@@ -576,7 +430,7 @@
     "skeleton": null,
     "skeletonHightLight": null,
     "hightLight": {
-      "__id__": 34
+      "__id__": 19
     },
     "_id": "37SyrepZZC9LhTBMZFftj1"
   },
@@ -586,19 +440,19 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 35
+      "__id__": 20
     },
     "_children": [],
     "_active": false,
     "_components": [
       {
-        "__id__": 90
+        "__id__": 75
       },
       {
-        "__id__": 91
+        "__id__": 76
       },
       {
-        "__id__": 92
+        "__id__": 77
       }
     ],
     "_prefab": null,
@@ -639,40 +493,40 @@
     "_parent": null,
     "_children": [
       {
-        "__id__": 36
+        "__id__": 21
       },
       {
-        "__id__": 74
+        "__id__": 59
       },
       {
-        "__id__": 67
+        "__id__": 52
       },
       {
-        "__id__": 83
+        "__id__": 68
       },
       {
-        "__id__": 48
+        "__id__": 33
       },
       {
-        "__id__": 42
+        "__id__": 27
       },
       {
-        "__id__": 61
+        "__id__": 46
       },
       {
-        "__id__": 55
+        "__id__": 40
       },
       {
-        "__id__": 34
+        "__id__": 19
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 89
+        "__id__": 74
       },
       {
-        "__id__": 40
+        "__id__": 25
       }
     ],
     "_prefab": null,
@@ -711,22 +565,22 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 35
+      "__id__": 20
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 37
+        "__id__": 22
       },
       {
-        "__id__": 38
+        "__id__": 23
       },
       {
-        "__id__": 39
+        "__id__": 24
       },
       {
-        "__id__": 88
+        "__id__": 73
       }
     ],
     "_prefab": null,
@@ -765,7 +619,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 36
+      "__id__": 21
     },
     "_enabled": true,
     "__prefab": null,
@@ -787,7 +641,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 36
+      "__id__": 21
     },
     "_enabled": true,
     "__prefab": null,
@@ -826,12 +680,12 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 36
+      "__id__": 21
     },
     "_enabled": true,
     "__prefab": null,
     "skeleton": {
-      "__id__": 40
+      "__id__": 25
     },
     "boneName": "shadowCard",
     "_id": "35h9lbHdRIo7YbGWGQ/MPl"
@@ -842,7 +696,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 35
+      "__id__": 20
     },
     "_enabled": true,
     "__prefab": null,
@@ -868,28 +722,28 @@
     "_cacheMode": 0,
     "_sockets": [
       {
-        "__id__": 41
+        "__id__": 26
       },
       {
-        "__id__": 47
+        "__id__": 32
       },
       {
-        "__id__": 54
+        "__id__": 39
       },
       {
-        "__id__": 60
+        "__id__": 45
       },
       {
-        "__id__": 66
+        "__id__": 51
       },
       {
-        "__id__": 72
+        "__id__": 57
       },
       {
-        "__id__": 73
+        "__id__": 58
       },
       {
-        "__id__": 82
+        "__id__": 67
       }
     ],
     "_useTint": false,
@@ -904,7 +758,7 @@
     "__type__": "sp.Skeleton.SpineSocket",
     "path": "root/card/bgFrontCard/rank",
     "target": {
-      "__id__": 42
+      "__id__": 27
     }
   },
   {
@@ -913,22 +767,22 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 35
+      "__id__": 20
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 43
+        "__id__": 28
       },
       {
-        "__id__": 44
+        "__id__": 29
       },
       {
-        "__id__": 45
+        "__id__": 30
       },
       {
-        "__id__": 46
+        "__id__": 31
       }
     ],
     "_prefab": null,
@@ -967,7 +821,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 42
+      "__id__": 27
     },
     "_enabled": true,
     "__prefab": null,
@@ -989,7 +843,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 42
+      "__id__": 27
     },
     "_enabled": true,
     "__prefab": null,
@@ -1028,12 +882,12 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 42
+      "__id__": 27
     },
     "_enabled": true,
     "__prefab": null,
     "skeleton": {
-      "__id__": 40
+      "__id__": 25
     },
     "boneName": "rank",
     "_id": "92+edQo91FB7Nm/31h/2br"
@@ -1044,7 +898,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 42
+      "__id__": 27
     },
     "_enabled": true,
     "__prefab": null,
@@ -1055,7 +909,7 @@
     "__type__": "sp.Skeleton.SpineSocket",
     "path": "root/card/bgFrontCard/largeSuit",
     "target": {
-      "__id__": 48
+      "__id__": 33
     }
   },
   {
@@ -1064,25 +918,25 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 35
+      "__id__": 20
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 49
+        "__id__": 34
       },
       {
-        "__id__": 50
+        "__id__": 35
       },
       {
-        "__id__": 51
+        "__id__": 36
       },
       {
-        "__id__": 52
+        "__id__": 37
       },
       {
-        "__id__": 53
+        "__id__": 38
       }
     ],
     "_prefab": null,
@@ -1121,7 +975,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 48
+      "__id__": 33
     },
     "_enabled": true,
     "__prefab": null,
@@ -1143,7 +997,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 48
+      "__id__": 33
     },
     "_enabled": true,
     "__prefab": null,
@@ -1182,7 +1036,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 48
+      "__id__": 33
     },
     "_enabled": true,
     "__prefab": null,
@@ -1212,12 +1066,12 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 48
+      "__id__": 33
     },
     "_enabled": true,
     "__prefab": null,
     "skeleton": {
-      "__id__": 40
+      "__id__": 25
     },
     "boneName": "largeSuit",
     "_id": "3fVPHw37hD0IBukRcOBRZa"
@@ -1228,7 +1082,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 48
+      "__id__": 33
     },
     "_enabled": true,
     "__prefab": null,
@@ -1239,7 +1093,7 @@
     "__type__": "sp.Skeleton.SpineSocket",
     "path": "root/card/bgBackCard/IbICardIndex",
     "target": {
-      "__id__": 55
+      "__id__": 40
     }
   },
   {
@@ -1248,22 +1102,22 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 35
+      "__id__": 20
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 56
+        "__id__": 41
       },
       {
-        "__id__": 57
+        "__id__": 42
       },
       {
-        "__id__": 58
+        "__id__": 43
       },
       {
-        "__id__": 59
+        "__id__": 44
       }
     ],
     "_prefab": null,
@@ -1302,7 +1156,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 55
+      "__id__": 40
     },
     "_enabled": true,
     "__prefab": null,
@@ -1324,7 +1178,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 55
+      "__id__": 40
     },
     "_enabled": true,
     "__prefab": null,
@@ -1389,7 +1243,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 55
+      "__id__": 40
     },
     "_enabled": true,
     "__prefab": null,
@@ -1402,12 +1256,12 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 55
+      "__id__": 40
     },
     "_enabled": true,
     "__prefab": null,
     "skeleton": {
-      "__id__": 40
+      "__id__": 25
     },
     "boneName": "IbICardIndex",
     "_id": "86gnvKUdRDMqyLFhwbwggV"
@@ -1416,7 +1270,7 @@
     "__type__": "sp.Skeleton.SpineSocket",
     "path": "root/card/bgFrontCard/smallSuit",
     "target": {
-      "__id__": 61
+      "__id__": 46
     }
   },
   {
@@ -1425,22 +1279,22 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 35
+      "__id__": 20
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 62
+        "__id__": 47
       },
       {
-        "__id__": 63
+        "__id__": 48
       },
       {
-        "__id__": 64
+        "__id__": 49
       },
       {
-        "__id__": 65
+        "__id__": 50
       }
     ],
     "_prefab": null,
@@ -1479,7 +1333,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 61
+      "__id__": 46
     },
     "_enabled": true,
     "__prefab": null,
@@ -1501,7 +1355,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 61
+      "__id__": 46
     },
     "_enabled": true,
     "__prefab": null,
@@ -1540,12 +1394,12 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 61
+      "__id__": 46
     },
     "_enabled": true,
     "__prefab": null,
     "skeleton": {
-      "__id__": 40
+      "__id__": 25
     },
     "boneName": "smallSuit",
     "_id": "66PvLjSUhD5Y58xOLLAXB9"
@@ -1556,7 +1410,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 61
+      "__id__": 46
     },
     "_enabled": true,
     "__prefab": null,
@@ -1567,7 +1421,7 @@
     "__type__": "sp.Skeleton.SpineSocket",
     "path": "root/card/bgFrontCard/bgWhiteCard",
     "target": {
-      "__id__": 67
+      "__id__": 52
     }
   },
   {
@@ -1576,22 +1430,22 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 35
+      "__id__": 20
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 68
+        "__id__": 53
       },
       {
-        "__id__": 69
+        "__id__": 54
       },
       {
-        "__id__": 70
+        "__id__": 55
       },
       {
-        "__id__": 71
+        "__id__": 56
       }
     ],
     "_prefab": null,
@@ -1630,7 +1484,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 67
+      "__id__": 52
     },
     "_enabled": true,
     "__prefab": null,
@@ -1652,7 +1506,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 67
+      "__id__": 52
     },
     "_enabled": true,
     "__prefab": null,
@@ -1691,12 +1545,12 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 67
+      "__id__": 52
     },
     "_enabled": true,
     "__prefab": null,
     "skeleton": {
-      "__id__": 40
+      "__id__": 25
     },
     "boneName": "bgWhiteCard",
     "_id": "63CP7BYYRAn7hQB7UuY4Xa"
@@ -1707,7 +1561,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 67
+      "__id__": 52
     },
     "_enabled": true,
     "__prefab": null,
@@ -1718,14 +1572,14 @@
     "__type__": "sp.Skeleton.SpineSocket",
     "path": "root/shadowCard",
     "target": {
-      "__id__": 36
+      "__id__": 21
     }
   },
   {
     "__type__": "sp.Skeleton.SpineSocket",
     "path": "root/card/bgBackCard",
     "target": {
-      "__id__": 74
+      "__id__": 59
     }
   },
   {
@@ -1734,26 +1588,26 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 35
+      "__id__": 20
     },
     "_children": [
       {
-        "__id__": 75
+        "__id__": 60
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 78
+        "__id__": 63
       },
       {
-        "__id__": 79
+        "__id__": 64
       },
       {
-        "__id__": 80
+        "__id__": 65
       },
       {
-        "__id__": 81
+        "__id__": 66
       }
     ],
     "_prefab": null,
@@ -1792,16 +1646,16 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 74
+      "__id__": 59
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 76
+        "__id__": 61
       },
       {
-        "__id__": 77
+        "__id__": 62
       }
     ],
     "_prefab": null,
@@ -1840,7 +1694,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 75
+      "__id__": 60
     },
     "_enabled": true,
     "__prefab": null,
@@ -1862,7 +1716,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 75
+      "__id__": 60
     },
     "_enabled": true,
     "__prefab": null,
@@ -1901,7 +1755,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 74
+      "__id__": 59
     },
     "_enabled": true,
     "__prefab": null,
@@ -1923,7 +1777,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 74
+      "__id__": 59
     },
     "_enabled": true,
     "__prefab": null,
@@ -1962,12 +1816,12 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 74
+      "__id__": 59
     },
     "_enabled": true,
     "__prefab": null,
     "skeleton": {
-      "__id__": 40
+      "__id__": 25
     },
     "boneName": "bgBackCard",
     "_id": "5deXG29c1B0prdA9hE91cP"
@@ -1978,7 +1832,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 74
+      "__id__": 59
     },
     "_enabled": true,
     "__prefab": null,
@@ -1989,7 +1843,7 @@
     "__type__": "sp.Skeleton.SpineSocket",
     "path": "root/card/bgFrontCard/bgGold",
     "target": {
-      "__id__": 83
+      "__id__": 68
     }
   },
   {
@@ -1998,22 +1852,22 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 35
+      "__id__": 20
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 84
+        "__id__": 69
       },
       {
-        "__id__": 85
+        "__id__": 70
       },
       {
-        "__id__": 86
+        "__id__": 71
       },
       {
-        "__id__": 87
+        "__id__": 72
       }
     ],
     "_prefab": null,
@@ -2052,7 +1906,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 83
+      "__id__": 68
     },
     "_enabled": true,
     "__prefab": null,
@@ -2074,7 +1928,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 83
+      "__id__": 68
     },
     "_enabled": true,
     "__prefab": null,
@@ -2113,12 +1967,12 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 83
+      "__id__": 68
     },
     "_enabled": true,
     "__prefab": null,
     "skeleton": {
-      "__id__": 40
+      "__id__": 25
     },
     "boneName": "bgGold",
     "_id": "42Im67elBLB76PeViZ6kYz"
@@ -2129,7 +1983,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 83
+      "__id__": 68
     },
     "_enabled": true,
     "__prefab": null,
@@ -2142,7 +1996,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 36
+      "__id__": 21
     },
     "_enabled": true,
     "__prefab": null,
@@ -2155,7 +2009,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 35
+      "__id__": 20
     },
     "_enabled": true,
     "__prefab": null,
@@ -2177,7 +2031,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 34
+      "__id__": 19
     },
     "_enabled": true,
     "__prefab": null,
@@ -2199,7 +2053,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 34
+      "__id__": 19
     },
     "_enabled": true,
     "__prefab": null,
@@ -2238,7 +2092,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 34
+      "__id__": 19
     },
     "_enabled": true,
     "__prefab": null,
@@ -2271,28 +2125,28 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 95
+      "__id__": 80
     },
     "shadows": {
-      "__id__": 96
+      "__id__": 81
     },
     "_skybox": {
-      "__id__": 97
+      "__id__": 82
     },
     "fog": {
-      "__id__": 98
+      "__id__": 83
     },
     "octree": {
-      "__id__": 99
+      "__id__": 84
     },
     "skin": {
-      "__id__": 100
+      "__id__": 85
     },
     "lightProbeInfo": {
-      "__id__": 101
+      "__id__": 86
     },
     "postSettings": {
-      "__id__": 102
+      "__id__": 87
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false

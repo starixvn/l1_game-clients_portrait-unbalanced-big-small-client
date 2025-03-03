@@ -39,13 +39,28 @@ export class GameResult extends ObserverComponent {
     }
 
     @render(Rounds.RoundTimeStore, (store) => store.isStartingRound)
-    async hideResultText(isStartingRound: boolean) {
+    async handleStartingRound(isStartingRound: boolean) {
         if (isStartingRound && this.skeletonDice) {
             this.setResultTextVisibility(false);
             this.skeletonDice.node.active = true;
             await AnimationUtils.playSpine(this.skeletonDice, "close", false);
             AnimationUtils.playSpine(this.skeletonDice, "shake", false);
         }
+    }
+
+    @render(Rounds.RoundTimeStore, (store) => store.isPlacingBet)
+    handlePlacingBet(isPlacingBet: boolean) {
+        if (isPlacingBet && this.skeletonDice) {
+            this.setResultTextVisibility(false);
+            AnimationUtils.pauseSpineAnimation(this.skeletonDice, 1, "close");
+            AnimationUtils.pauseSpineAnimation(this.skeletonDice, 1, "shake");
+            AnimationUtils.playSpine(this.skeletonDice, "idle", true);
+        }
+    }
+
+    @render(Rounds.RoundTimeStore, (store) => store.isLocking)
+    setAnimDishAtLockingBet(isLocking: boolean) {
+        isLocking && AnimationUtils.playSpine(this.skeletonDice, "idle", true);
     }
 
     setResultTextVisibility(isShow: boolean) {

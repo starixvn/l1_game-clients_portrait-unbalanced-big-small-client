@@ -110,7 +110,7 @@ export default class Game extends GameComponent {
         if (firstJoinGameHistory.staticHighlight) {
             this.resultComp.skeletonDice && AnimationUtils.playSpine(this.resultComp.skeletonDice, "idle", true);
         } else {
-            if (lastRound) {
+            if (lastRound && firstJoinGameHistory.animationHighlight) {
                 const { result, settlementResult } = lastRound;
                 this.showResult(result, false, settlementResult);
             }
