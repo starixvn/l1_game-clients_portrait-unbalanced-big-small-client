@@ -6,14 +6,14 @@ filter: Linear,Linear
 repeat: none
 bet-option-main
   rotate: false
-  xy: 2, 41
-  size: 367, 417
-  orig: 367, 417
+  xy: 2, 2
+  size: 404, 326
+  orig: 404, 326
   offset: 0, 0
   index: -1
 vfx-star
-  rotate: true
-  xy: 2, 2
+  rotate: false
+  xy: 408, 288
   size: 37, 40
   orig: 37, 40
   offset: 0, 0

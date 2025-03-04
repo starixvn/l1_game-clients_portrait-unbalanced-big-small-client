@@ -1,9 +1,9 @@
 {
-"skeleton": { "hash": "eagAextjQM837s279WOFjrcsPqs", "spine": "3.8.99" },
+"skeleton": { "hash": "F3q+K5kdbLKVO4NaJpb9xglYUz0", "spine": "3.8.99" },
 "bones": [
 	{ "name": "root", "y": 1.71 },
 	{ "name": "bet-option", "parent": "root", "y": -1.71 },
-	{ "name": "bet-option-main-bgwinning", "parent": "bet-option", "y": 1.71 },
+	{ "name": "bet-option-main-bgwinning", "parent": "bet-option" },
 	{ "name": "vfx", "parent": "bet-option", "x": -53.01, "y": -10.26 },
 	{ "name": "stars", "parent": "vfx" },
 	{ "name": "star-const", "parent": "stars", "length": 108.87, "rotation": 65.28, "x": -0.13, "y": -0.6 },
@@ -96,7 +96,7 @@
 		"name": "default",
 		"attachments": {
 			"bet-option-main": {
-				"bet-option-main": { "width": 367, "height": 417 }
+				"bet-option-main": { "width": 404, "height": 326 }
 			},
 			"vfx-star": {
 				"vfx-star": { "width": 37, "height": 40 }
