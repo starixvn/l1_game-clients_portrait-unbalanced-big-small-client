@@ -2,12 +2,12 @@
   "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "c3b0db99-dc3c-40f2-b8d3-6ac2338c3cb6",
+  "uuid": "6fee1916-15fe-40ac-a5fa-1778471ef031",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "bet-history-sicbo-body-item"
+    "syncNodeName": "unbalanced-bigsmall-result-body"
   }
 }
