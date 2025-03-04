@@ -37,6 +37,7 @@ export class GameResult extends ObserverComponent {
 
     showResultNoAnim(result: any, settlementResult: any) {
         this.skeletonDice && (this.skeletonDice.node.active = false);
+        this.setResultDiceFrames(result);
         this.showResultText(result, settlementResult);
     }
 
