@@ -1069,7 +1069,7 @@
     "_originalHeight": 0,
     "_alignMode": 1,
     "_lockFlags": 0,
-    "_id": "b4WTXd7H5Mp6Wwrnrkch2E"
+    "_id": "45o/V+QCNG34BoZ0JQ6Lov"
   },
   {
     "__type__": "cc.Node",
@@ -6496,7 +6496,7 @@
       "headerPrefab"
     ],
     "value": {
-      "__uuid__": "b54c2454-c5ec-4225-834b-509134bd9d57",
+      "__uuid__": "baaa9c38-fbd8-4fba-a77b-cc70b2e77be2",
       "__expectedType__": "cc.Prefab"
     }
   },
@@ -6515,7 +6515,7 @@
       "bodyItemPrefab"
     ],
     "value": {
-      "__uuid__": "c3b0db99-dc3c-40f2-b8d3-6ac2338c3cb6",
+      "__uuid__": "e4cfe935-39a2-4083-8b7d-f99ce4b99ca0",
       "__expectedType__": "cc.Prefab"
     }
   },
