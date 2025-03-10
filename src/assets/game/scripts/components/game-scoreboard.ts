@@ -27,27 +27,27 @@ export class GameScoreBoard extends ObserverComponent {
     scrollDiceStatistic: ScrollView = null;
 
     @property(Sprite)
-    sprChangeModeBigRoad: Sprite = null;
+    sprChangeModeDices: Sprite = null;
 
-    private isExpandBigRoad = false;
+    private isExpandDices = false;
 
-    private readonly WIDTH_COLLAPSE_BIGROAD = 98;
+    private readonly WIDTH_COLLAPSE_DICES = 150;
     private readonly WIDTH_SPACING = 32;
     private readonly WIDTH_GAME = 828;
 
     onClickExpandMode() {
-        this.isExpandBigRoad = !this.isExpandBigRoad;
+        this.isExpandDices = !this.isExpandDices;
 
-        if (this.isExpandBigRoad) {
-            const widthNodeRemain = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_COLLAPSE_BIGROAD;
-            this.nodeDiceStatistic.getComponent(UITransform).width = this.WIDTH_COLLAPSE_BIGROAD;
-            this.nodeBigRoad.getComponent(UITransform).width = widthNodeRemain;
-            this.sprChangeModeBigRoad.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-collapse");
-        } else {
-            const widthNodeRemain = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_COLLAPSE_BIGROAD;
+        if (this.isExpandDices) {
+            const widthNodeRemain = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_COLLAPSE_DICES;
+            this.nodeBigRoad.getComponent(UITransform).width = this.WIDTH_COLLAPSE_DICES;
             this.nodeDiceStatistic.getComponent(UITransform).width = widthNodeRemain;
-            this.nodeBigRoad.getComponent(UITransform).width = this.WIDTH_COLLAPSE_BIGROAD;
-            this.sprChangeModeBigRoad.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-expand");
+            this.sprChangeModeDices.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-collapse");
+        } else {
+            const widthNodeRemain = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_COLLAPSE_DICES;
+            this.nodeBigRoad.getComponent(UITransform).width = widthNodeRemain;
+            this.nodeDiceStatistic.getComponent(UITransform).width = this.WIDTH_COLLAPSE_DICES;
+            this.sprChangeModeDices.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-expand");
         }
 
         this.scrollBigRoad.stopAutoScroll();
