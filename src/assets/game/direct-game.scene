@@ -685,7 +685,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -45.177734375,
+      "x": -49.177734375,
       "y": 0,
       "z": 0
     }
@@ -706,7 +706,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -3.162109375,
+      "x": -1.162109375,
       "y": 0,
       "z": 0
     }
@@ -727,7 +727,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 90.35546875,
+      "width": 94.35546875,
       "height": 40
     }
   },
@@ -747,7 +747,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -60.669921875,
+      "x": -64.669921875,
       "y": 0,
       "z": 0
     }
@@ -768,7 +768,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 12.330078125,
+      "x": 14.330078125,
       "y": 0,
       "z": 0
     }
@@ -789,7 +789,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 121.33984375,
+      "width": 125.33984375,
       "height": 40
     }
   },
@@ -809,7 +809,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -72.669921875,
+      "x": -74.669921875,
       "y": 0,
       "z": 0
     }
@@ -830,7 +830,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 57.177734375,
+      "x": 59.177734375,
       "y": 0,
       "z": 0
     }
@@ -851,7 +851,7 @@
     ],
     "value": {
       "__type__": "cc.Size",
-      "width": 241.6953125,
+      "width": 249.6953125,
       "height": 50
     }
   },
@@ -869,7 +869,7 @@
     "propertyPath": [
       "_left"
     ],
-    "value": 0
+    "value": -2
   },
   {
     "__type__": "cc.TargetInfo",
@@ -885,7 +885,7 @@
     "propertyPath": [
       "_left"
     ],
-    "value": 0
+    "value": -2
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1069,7 +1069,7 @@
     "_originalHeight": 0,
     "_alignMode": 1,
     "_lockFlags": 0,
-    "_id": "45o/V+QCNG34BoZ0JQ6Lov"
+    "_id": "f3/SzpxZRHCqs4gtQFEW9I"
   },
   {
     "__type__": "cc.Node",
@@ -2440,7 +2440,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_opacity": 160,
+    "_opacity": 100,
     "_id": "1argz9NxpAu6RPQRnyvFPb"
   },
   {
