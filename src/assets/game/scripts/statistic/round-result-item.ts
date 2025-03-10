@@ -1,5 +1,4 @@
-import gc from "@sg/game-client-base";
-import { _decorator, Color, Component, Label, Node, Sprite, SpriteAtlas } from "cc";
+import { _decorator, Component, Label, Node, Sprite, SpriteAtlas } from "cc";
 
 const { ccclass, property } = _decorator;
 
@@ -13,8 +12,8 @@ export class RoundResultItem extends Component {
     @property({ type: Node })
     dices: Node[] = [];
 
-    @property(Label)
-    lblResult: Label = null;
+    @property(Node)
+    nodeResult: Node = null;
 
     @property(Label)
     lblTotalPoint: Label = null;
@@ -26,14 +25,12 @@ export class RoundResultItem extends Component {
     mainAtlas: SpriteAtlas = null;
 
     private mainChoice = ["big", "small"];
-    private choiceColors = ["ff4848", "3a8eff"];
 
     setData(data: any) {
         const { result, settlementResult } = data;
         this.mainChoice.forEach((choice, index) => {
             if (settlementResult[choice]) {
-                this.lblResult.string = gc.Translator.gameTranslate(`scoreboard_${choice}`);
-                this.lblResult.color = new Color().fromHEX(this.choiceColors[index]);
+                this.nodeResult.children[index].active = true;
             }
         });
 
