@@ -57,6 +57,7 @@ export const languages = {
         "message_account_notexist_place_bet": "Permainan %{gameName} (#%{gameRoundId})\n\nGagal memasang taruhan! Sebuah kesalahan telah terjadi. Silakan hubungi CSD untuk lebih lanjut, terima kasih. (%{errorCode})",
         "message_account_signout": "Akun telah keluar karena orang lain masuk ke akun ini.",
         "message_account_suspended": "Permainan %{gameName} (#%{gameRoundId})\n\nGagal memasang taruhan! Akun telah ditangguhkan. Silakan hubungi upline Anda untuk lebih lanjut, terima kasih. (%{errorCode})",
+        "message_balanced_betting_pool": "Kumpulan taruhan seimbang.",
         "message_bet_limit_change": "Batas taruhan Anda baru saja diubah.",
         "message_cannot_bet": "Tidak bisa bertaruh saat ini. Harap tunggu beberapa detik.",
         "message_close_account": "Akun telah ditutup. Sesi Anda akan kedaluwarsa setelah 10 detik, silakan hubungi CSD untuk detailnya. (%{errorCode})",
@@ -178,6 +179,7 @@ export const languages = {
         "promotion": "Promosi",
         "promotion_terms_and_conditions": "Syarat dan Ketentuan",
         "reconnect": "Hubungkan kembali",
+        "refund": "Refund",
         "result": "Hasil",
         "rotateDevice": "Silakan putar perangkat Anda.",
         "round": "Babak",
@@ -189,6 +191,8 @@ export const languages = {
         "stake": "Taruhan",
         "submit": "KIRIMKAN",
         "terms_and_conditions_content": "- Semua pemain baru dan yang sudah ada berhak untuk mengikuti promosi dan mengambil kesempatan untuk memenangkan hadiah yang lebih besar. \n- Jumlah kemenangan dibayarkan sesuai dengan aturan promosi dan pembayaran. \n- Promosi berlaku untuk periode tertentu yang diatur oleh Perusahaan. Saat promosi kedaluwarsa, peluang taruhan akan diatur kembali ke nilai sebelumnya.\n- Perusahaan berhak mengubah syarat masuk yang berlaku untuk promosi ini atau mengubah, menghentikan, menangguhkan, atau menjadwal ulang promosi ini kapan saja.\n- Setiap perselisihan yang timbul dari atau sehubungan dengan promosi ini akan diputuskan oleh Perusahaan.",
+        "text_big_wins": "Kemenangan Besar!",
+        "text_small_win": "Kemenangan Kecil!",
         "time": "Waktu",
         "to": "ke",
         "total": "Total",
@@ -202,9 +206,10 @@ export const languages = {
         "you_reach_max_win": "Anda mencapai Maksimal Menang"
     },
     "UnbalancedBigSmall4": {
-        "game_name": "Monte Carlo Big Small"
+        "game_name": "Besar Kecil"
     },
     "BigSmall": {
+        "Unbalanced_betting_pool": "POOL TARUHAN TIDAK SEIMBANG",
         "glossary_big": "Besar",
         "glossary_small": "Kecil",
         "scoreboard_big": "B",

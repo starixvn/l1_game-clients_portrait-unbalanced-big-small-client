@@ -57,6 +57,7 @@ export const languages = {
         "message_account_notexist_place_bet": "%{gameName} 遊戲 (#%{gameRoundId})\n\n下注失敗！發生了錯誤。詳情請聯繫CSD，謝謝。(%{errorCode})",
         "message_account_signout": "該帳戶已被註銷，因為其他人已登錄此帳戶。",
         "message_account_suspended": "%{gameName} 遊戲 (#%{gameRoundId})\n\n下注失敗！帳戶已被暫停。詳情請聯絡您的上線，謝謝。(%{errorCode})",
+        "message_balanced_betting_pool": "平衡的投注池。",
         "message_bet_limit_change": "您的投注限額剛剛更改。",
         "message_cannot_bet": "暫時不能下注。請等待幾秒鐘。",
         "message_close_account": "帳戶已關閉。您的會話將在 10 秒後過期，詳情請聯繫 CSD。(%{errorCode})",
@@ -178,6 +179,7 @@ export const languages = {
         "promotion": "促銷活動",
         "promotion_terms_and_conditions": "條款和條件",
         "reconnect": "重新連接",
+        "refund": "退款",
         "result": "結果",
         "rotateDevice": "請旋轉您的設備。",
         "round": "回合",
@@ -189,6 +191,8 @@ export const languages = {
         "stake": "賭注",
         "submit": "提交",
         "terms_and_conditions_content": "- 所有新的和現有的投注者都有資格參加促銷活動並抓住機會贏得更大的獎品。\n- 中獎金額根據促銷規則和獎金支付。\n- 促銷適用於公司規定的特定時期。促銷期滿後，投注賠率將恢復為之前的值。\n- 促銷適用於公司規定的特定時期。促銷期滿後，投注賠率將恢復為之前的值。\n- 因本推廣活動引起或與之相關的任何爭議均由本公司決定。",
+        "text_big_wins": "大贏!",
+        "text_small_win": "小贏!",
         "time": "時間",
         "to": "到",
         "total": "全部的",
@@ -202,9 +206,10 @@ export const languages = {
         "you_reach_max_win": "您達到了最大勝利"
     },
     "UnbalancedBigSmall4": {
-        "game_name": "Monte Carlo Big Small"
+        "game_name": "大小"
     },
     "BigSmall": {
+        "Unbalanced_betting_pool": "不平衡的投注池",
         "glossary_big": "大",
         "glossary_small": "小",
         "scoreboard_big": "大",
