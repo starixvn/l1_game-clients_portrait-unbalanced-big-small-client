@@ -1,5 +1,5 @@
 import gc from "@sg/game-client-base";
-import { _decorator, Label } from "cc";
+import { _decorator, Color, Label } from "cc";
 import { BetHistoryNewBodyItem } from "db://shared-components/game/bet-history-new/scripts/bet-history-new-body-item";
 import { BetHistoryBodyItemType } from "db://shared-components/game/bet-history/scripts/components/bet-history-body-item";
 const { ccclass, property } = _decorator;
@@ -11,7 +11,7 @@ export class BetHistoryUnbalanceBigsmallBodyItem extends BetHistoryNewBodyItem {
 
     setData(data: BetHistoryBodyItemType) {
         super.setData(data);
-        const { settlementResult, freeBet, odds } = data.betHistoryLog;
+        const { settlementResult, freeBet, odds, totalAmount, betwin } = data.betHistoryLog;
         if (settlementResult) {
             Object.keys(settlementResult).forEach((choice) => {
                 let stake = data.betHistoryLog[choice];
@@ -22,6 +22,9 @@ export class BetHistoryUnbalanceBigsmallBodyItem extends BetHistoryNewBodyItem {
                 }
             });
         }
+        const winloss = betwin - totalAmount;
+        this.lblBet.color = winloss >= 0 ? new Color().fromHEX("F1E344") : new Color().fromHEX("ffffff");
+        this.lblTotalStake.color = winloss >= 0 ? new Color().fromHEX("F1E344") : new Color().fromHEX("ffffff");
     }
 
     handleBetOptionItem(choice: string, odd: string) {
