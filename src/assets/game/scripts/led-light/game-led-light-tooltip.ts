@@ -24,7 +24,8 @@ export class GameLedLightTooltip extends LedLightTooltip {
 
         this.mainChoice.forEach((choice) => {
             if (settlementResult[choice]) {
-                this.result.string = gc.Translator.gameTranslate(`glossary_${choice}`);
+                const choiceText = gc.Translator.gameTranslate(`glossary_${choice}`);
+                this.result.string = choiceText.toUpperCase();
             }
         });
         this.layoutResult.updateLayout();
