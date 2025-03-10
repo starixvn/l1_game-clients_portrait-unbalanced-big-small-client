@@ -1069,7 +1069,7 @@
     "_originalHeight": 0,
     "_alignMode": 1,
     "_lockFlags": 0,
-    "_id": "43K5rirZpMg5/k7zZqy9q7"
+    "_id": "21DHaYdpBO/I+7M5hof5E3"
   },
   {
     "__type__": "cc.Node",
@@ -2363,7 +2363,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_opacity": 180,
+    "_opacity": 150,
     "_id": "1argz9NxpAu6RPQRnyvFPb"
   },
   {
