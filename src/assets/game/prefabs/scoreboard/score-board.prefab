@@ -213,7 +213,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -72.669921875,
+      "x": -74.669921875,
       "y": 0,
       "z": 0
     },
@@ -272,7 +272,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -45.177734375,
+      "x": -49.177734375,
       "y": 0,
       "z": 0
     },
@@ -341,7 +341,7 @@
     },
     "_alignFlags": 8,
     "_target": null,
-    "_left": 0,
+    "_left": -2,
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
@@ -513,7 +513,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -3.162109375,
+      "x": -1.162109375,
       "y": 0,
       "z": 0
     },
@@ -684,7 +684,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 90.35546875,
+      "width": 94.35546875,
       "height": 40
     },
     "_anchorPoint": {
@@ -722,7 +722,7 @@
     "_paddingRight": 0,
     "_paddingTop": 0,
     "_paddingBottom": 0,
-    "_spacingX": 4,
+    "_spacingX": 8,
     "_spacingY": 0,
     "_verticalDirection": 1,
     "_horizontalDirection": 0,
@@ -779,7 +779,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 57.177734375,
+      "x": 59.177734375,
       "y": 0,
       "z": 0
     },
@@ -838,7 +838,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -60.669921875,
+      "x": -64.669921875,
       "y": 0,
       "z": 0
     },
@@ -996,7 +996,7 @@
     },
     "_alignFlags": 8,
     "_target": null,
-    "_left": 0,
+    "_left": -2,
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
@@ -1079,7 +1079,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 12.330078125,
+      "x": 14.330078125,
       "y": 0,
       "z": 0
     },
@@ -1250,7 +1250,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 121.33984375,
+      "width": 125.33984375,
       "height": 40
     },
     "_anchorPoint": {
@@ -1288,7 +1288,7 @@
     "_paddingRight": 0,
     "_paddingTop": 0,
     "_paddingBottom": 0,
-    "_spacingX": 4,
+    "_spacingX": 8,
     "_spacingY": 0,
     "_verticalDirection": 1,
     "_horizontalDirection": 0,
@@ -1329,7 +1329,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 241.6953125,
+      "width": 249.6953125,
       "height": 50
     },
     "_anchorPoint": {
