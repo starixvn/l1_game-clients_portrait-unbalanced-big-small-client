@@ -9,7 +9,6 @@ import GameComponent from "db://shared-components/game/scripts/components/game-c
 import { startGame } from "db://shared-components/shared/scripts/startup";
 import Observer from "observer";
 
-import { addChipsToChipBoxWhenJoinRoom } from "db://shared-components/game/chip-flying/scripts/components/actions/fly-chip-to-box";
 import { siteConfigs } from "../../../scripts/site-configs";
 import { containerOptions, settings } from "../game-settings";
 import { GameResult } from "./game-result";
@@ -118,21 +117,21 @@ export default class Game extends GameComponent {
             }
         }
 
-        const chips = this.parseChipsFromTotalBets(this.totalBets);
-        if (Object.keys(chips).length > 0) {
-            for (const betItem of this.chipFlying.betItems.betItemComponents) {
-                const chipGroup = chips[betItem.betChoice];
-                if (chipGroup) {
-                    const nodes = addChipsToChipBoxWhenJoinRoom(
-                        this.chipFlying.chipContainer,
-                        betItem.chipBox,
-                        chipGroup,
-                        this.chipFlying.slidingChip
-                    );
-                    this.chipFlying.addChipsToBoxWithChoice(nodes, betItem.betChoice);
-                }
-            }
-        }
+        // const chips = this.parseChipsFromTotalBets(this.totalBets);
+        // if (Object.keys(chips).length > 0) {
+        //     for (const betItem of this.chipFlying.betItems.betItemComponents) {
+        //         const chipGroup = chips[betItem.betChoice];
+        //         if (chipGroup) {
+        //             const nodes = addChipsToChipBoxWhenJoinRoom(
+        //                 this.chipFlying.chipContainer,
+        //                 betItem.chipBox,
+        //                 chipGroup,
+        //                 this.chipFlying.slidingChip
+        //             );
+        //             this.chipFlying.addChipsToBoxWithChoice(nodes, betItem.betChoice);
+        //         }
+        //     }
+        // }
     }
 
     @render(Rounds.RoundTimeStore, (store) => store.roundState)
@@ -157,30 +156,30 @@ export default class Game extends GameComponent {
         this.chipsByStakeLevel = chipValuesByStakeLevel;
     }
 
-    parseChipsFromTotalBets(totalBets: gc.GameServiceMessage.TotalBets) {
-        if (!totalBets) {
-            return;
-        }
-        let chips = {};
-        Object.keys(totalBets).forEach((choice) => {
-            const betChoiceData = {};
-            const totalBetChoice = totalBets[choice];
-            let totalBetChoiceTmp = totalBetChoice;
-            const chipsByStake = this.chipsByStakeLevel.filter((item) => item <= totalBetChoice);
-            for (let i = chipsByStake.length - 1; i >= 0; i--) {
-                const chip = chipsByStake[i];
-                const count = Math.floor(totalBetChoiceTmp / chip);
-                if (count > 0) {
-                    betChoiceData[chip] = count;
-                }
-                totalBetChoiceTmp -= count * chip;
-                if (totalBetChoiceTmp === 0) {
-                    break;
-                }
-            }
-            chips[choice] = betChoiceData;
-        });
-        console.log("chips", chips);
-        return chips;
-    }
+    // parseChipsFromTotalBets(totalBets: gc.GameServiceMessage.TotalBets) {
+    //     if (!totalBets) {
+    //         return;
+    //     }
+    //     let chips = {};
+    //     Object.keys(totalBets).forEach((choice) => {
+    //         const betChoiceData = {};
+    //         const totalBetChoice = totalBets[choice];
+    //         let totalBetChoiceTmp = totalBetChoice;
+    //         const chipsByStake = this.chipsByStakeLevel.filter((item) => item <= totalBetChoice);
+    //         for (let i = chipsByStake.length - 1; i >= 0; i--) {
+    //             const chip = chipsByStake[i];
+    //             const count = Math.floor(totalBetChoiceTmp / chip);
+    //             if (count > 0) {
+    //                 betChoiceData[chip] = count;
+    //             }
+    //             totalBetChoiceTmp -= count * chip;
+    //             if (totalBetChoiceTmp === 0) {
+    //                 break;
+    //             }
+    //         }
+    //         chips[choice] = betChoiceData;
+    //     });
+    //     console.log("chips", chips);
+    //     return chips;
+    // }
 }
