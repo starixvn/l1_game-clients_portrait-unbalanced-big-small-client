@@ -206,7 +206,8 @@ export const languages = {
         "you_reach_max_win": "คุณถึงยอดชนะสูงสุด"
     },
     "UnbalancedBigSmall4": {
-        "game_name": "ใหญ่/เล็ก"
+        "game_name": "ใหญ่/เล็ก",
+        "game_name_full": "มอนติคาร์โล ใหญ่-เล็ก"
     },
     "BigSmall": {
         "Unbalanced_betting_pool": "การเดิมพันที่ไม่มีสิ้นสุด",

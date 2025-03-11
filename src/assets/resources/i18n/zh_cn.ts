@@ -206,7 +206,8 @@ export const languages = {
         "you_reach_max_win": "您达到了最大胜利"
     },
     "UnbalancedBigSmall4": {
-        "game_name": "大小"
+        "game_name": "大小",
+        "game_name_full": "蒙特卡罗大小"
     },
     "BigSmall": {
         "Unbalanced_betting_pool": "不平衡的投注池",

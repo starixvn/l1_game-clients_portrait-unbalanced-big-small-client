@@ -206,7 +206,8 @@ export const languages = {
         "you_reach_max_win": "You reached the max win"
     },
     "UnbalancedBigSmall4": {
-        "game_name": "Big Small"
+        "game_name": "Monte Carlo Big Small",
+        "game_name_full": "Monte Carlo Big Small"
     },
     "BigSmall": {
         "Unbalanced_betting_pool": "Unbalanced Betting Pool",
