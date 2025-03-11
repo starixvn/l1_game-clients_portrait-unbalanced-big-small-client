@@ -35,27 +35,35 @@ export class GameScoreBoard extends ObserverComponent {
     private readonly WIDTH_SPACING = 32;
     private readonly WIDTH_GAME = 828;
 
+    private updateNodeWidths(expandedNode: Node, collapsedNode: Node) {
+        const widthNodeRemain = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_COLLAPSE_DICES;
+        expandedNode.getComponent(UITransform).width = widthNodeRemain;
+        collapsedNode.getComponent(UITransform).width = this.WIDTH_COLLAPSE_DICES;
+    }
+
     onClickExpandMode() {
         this.isExpandDices = !this.isExpandDices;
 
+        // Update node widths based on expanded state
         if (this.isExpandDices) {
-            const widthNodeRemain = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_COLLAPSE_DICES;
-            this.nodeBigRoad.getComponent(UITransform).width = this.WIDTH_COLLAPSE_DICES;
-            this.nodeDiceStatistic.getComponent(UITransform).width = widthNodeRemain;
+            this.updateNodeWidths(this.nodeDiceStatistic, this.nodeBigRoad);
             this.sprChangeModeDices.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-collapse");
         } else {
-            const widthNodeRemain = this.WIDTH_GAME - this.WIDTH_SPACING - this.WIDTH_COLLAPSE_DICES;
-            this.nodeBigRoad.getComponent(UITransform).width = widthNodeRemain;
-            this.nodeDiceStatistic.getComponent(UITransform).width = this.WIDTH_COLLAPSE_DICES;
+            this.updateNodeWidths(this.nodeBigRoad, this.nodeDiceStatistic);
             this.sprChangeModeDices.spriteFrame = this.mainAtlas.getSpriteFrame("stats-icon-expand");
         }
 
-        this.scrollBigRoad.stopAutoScroll();
-        this.scrollBigRoad.scrollToRight();
+        // Reset and update scrollviews
+        [this.scrollBigRoad, this.scrollDiceStatistic].forEach((scroll) => {
+            scroll.stopAutoScroll();
+            scroll.scrollToRight();
+        });
 
-        this.scrollDiceStatistic.stopAutoScroll();
-        this.scrollDiceStatistic.scrollToRight();
-
+        // Update layout
         this.nodeContainer.getComponent(Layout).updateLayout();
+
+        this.scheduleOnce(() => {
+            this.scrollDiceStatistic.scrollToRight();
+        }, 0.1);
     }
 }
