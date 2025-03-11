@@ -36,10 +36,6 @@ export default class Game extends GameComponent {
     protected enableFixHandleFinish = true;
     private audioContainer: AudioContainer = null;
     private isAnimatingResult = false;
-    private prevResult: any;
-    private currentRoundId: number;
-    private totalBets: gc.GameServiceMessage.TotalBets = null;
-    private chipsByStakeLevel = [];
     private soundWinChoice = ["big", "small"];
 
     onLoad() {
@@ -49,9 +45,9 @@ export default class Game extends GameComponent {
     }
 
     @render(Rounds.RoundStore, (store) => store.clientRoundId)
-    updateCurrentRoundId(roundId: number) {
+    renderRoundId(roundId: number) {
         // TODO: Remove this after resolving issue
-        roundId > 1 && (this.currentRoundId = roundId);
+        roundId > 1 && this.lblRoundId && (this.lblRoundId.string = `#${roundId}`);
     }
 
     @render(RoundHistories.RoundHistoryStore, (store) => store.histories)
@@ -117,22 +113,6 @@ export default class Game extends GameComponent {
                 this.showResult(result, false, settlementResult);
             }
         }
-
-        // const chips = this.parseChipsFromTotalBets(this.totalBets);
-        // if (Object.keys(chips).length > 0) {
-        //     for (const betItem of this.chipFlying.betItems.betItemComponents) {
-        //         const chipGroup = chips[betItem.betChoice];
-        //         if (chipGroup) {
-        //             const nodes = addChipsToChipBoxWhenJoinRoom(
-        //                 this.chipFlying.chipContainer,
-        //                 betItem.chipBox,
-        //                 chipGroup,
-        //                 this.chipFlying.slidingChip
-        //             );
-        //             this.chipFlying.addChipsToBoxWithChoice(nodes, betItem.betChoice);
-        //         }
-        //     }
-        // }
     }
 
     @render(Rounds.RoundTimeStore, (store) => store.roundState)
@@ -156,31 +136,4 @@ export default class Game extends GameComponent {
     assignchipValuesByStakeLevel(chipValuesByStakeLevel: any) {
         this.chipsByStakeLevel = chipValuesByStakeLevel;
     }
-
-    // parseChipsFromTotalBets(totalBets: gc.GameServiceMessage.TotalBets) {
-    //     if (!totalBets) {
-    //         return;
-    //     }
-    //     let chips = {};
-    //     Object.keys(totalBets).forEach((choice) => {
-    //         const betChoiceData = {};
-    //         const totalBetChoice = totalBets[choice];
-    //         let totalBetChoiceTmp = totalBetChoice;
-    //         const chipsByStake = this.chipsByStakeLevel.filter((item) => item <= totalBetChoice);
-    //         for (let i = chipsByStake.length - 1; i >= 0; i--) {
-    //             const chip = chipsByStake[i];
-    //             const count = Math.floor(totalBetChoiceTmp / chip);
-    //             if (count > 0) {
-    //                 betChoiceData[chip] = count;
-    //             }
-    //             totalBetChoiceTmp -= count * chip;
-    //             if (totalBetChoiceTmp === 0) {
-    //                 break;
-    //             }
-    //         }
-    //         chips[choice] = betChoiceData;
-    //     });
-    //     console.log("chips", chips);
-    //     return chips;
-    // }
 }
