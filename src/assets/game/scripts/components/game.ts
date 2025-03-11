@@ -50,7 +50,8 @@ export default class Game extends GameComponent {
 
     @render(Rounds.RoundStore, (store) => store.clientRoundId)
     updateCurrentRoundId(roundId: number) {
-        roundId > 0 && (this.currentRoundId = roundId);
+        // TODO: Remove this after resolving issue
+        roundId > 1 && (this.currentRoundId = roundId);
     }
 
     @render(RoundHistories.RoundHistoryStore, (store) => store.histories)
