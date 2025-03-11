@@ -206,7 +206,7 @@ export const languages = {
         "you_reach_max_win": "您達到了最大勝利"
     },
     "UnbalancedBigSmall4": {
-        "game_name": "大小",
+        "game_name": "蒙特卡羅大小",
         "game_name_full": "蒙特卡羅大小"
     },
     "BigSmall": {

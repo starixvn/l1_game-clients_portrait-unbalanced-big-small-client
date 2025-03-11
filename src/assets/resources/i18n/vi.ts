@@ -206,7 +206,7 @@ export const languages = {
         "you_reach_max_win": "Bạn Đã Đạt Mức Tiền Thắng Tối Đa"
     },
     "UnbalancedBigSmall4": {
-        "game_name": "Tài Xỉu",
+        "game_name": "Tài Xỉu Monte Carlo",
         "game_name_full": "Tài Xỉu Monte Carlo"
     },
     "BigSmall": {

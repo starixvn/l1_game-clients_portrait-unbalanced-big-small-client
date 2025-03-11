@@ -206,7 +206,7 @@ export const languages = {
         "you_reach_max_win": "Anda mencapai Maksimal Menang"
     },
     "UnbalancedBigSmall4": {
-        "game_name": "Besar Kecil",
+        "game_name": "Monte Carlo Besar Kecil",
         "game_name_full": "Monte Carlo Besar Kecil"
     },
     "BigSmall": {
