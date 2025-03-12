@@ -1,3 +1,4 @@
+import gc from "@sg/game-client-base";
 import { _decorator, Component, Label, Node, Sprite, SpriteAtlas } from "cc";
 
 const { ccclass, property } = _decorator;
@@ -30,7 +31,7 @@ export class RoundResultItem extends Component {
         const { result, settlementResult } = data;
         this.mainChoice.forEach((choice, index) => {
             if (settlementResult[choice]) {
-                this.nodeResult.children[index].active = true;
+                this.nodeResult.getComponent(Label).string = gc.Translator.gameTranslate(`scoreboard_${choice}`);
             }
         });
 
