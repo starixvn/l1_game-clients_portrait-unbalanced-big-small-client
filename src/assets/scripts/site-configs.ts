@@ -24,9 +24,6 @@ const defaultConfig: gc.Configs.SiteConfigs = {
         proxyPath: "unbalancedbigsmall4",
         route: "unbalancedbigsmall",
     },
-    websocketOptions: {
-        timeout: 3000,
-    },
 
     mainObserverNamespace: "UnbalancedBigSmall4",
     tolgeeUrl: "",
