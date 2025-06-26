@@ -24,6 +24,7 @@ export default class ResultBodyItem extends BaseResultBodyItem {
         this.dices[1].spriteFrame = dicesSpriteFrames[result.dice2 - 1];
         this.dices[2].spriteFrame = dicesSpriteFrames[result.dice3 - 1];
         const winChoice = ["big", "small"].find((choice) => settlementResult[choice]);
-        this.result.string = `${gc.Translator.translate(`BigSmall.glossary_${winChoice}`)} - ${result.dice1 + result.dice2 + result.dice3}`;
+        const winChoiceStr = gc.Translator.translate(`BigSmall.glossary_${winChoice}`);
+        this.result.string = `${winChoiceStr} - ${result.dice1 + result.dice2 + result.dice3}`;
     }
 }

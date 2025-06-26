@@ -24,8 +24,6 @@ const defaultConfig: gc.Configs.SiteConfigs = {
         proxyPath: "unbalancedbigsmall4",
         route: "unbalancedbigsmall",
     },
-
-    mainObserverNamespace: "UnbalancedBigSmall4",
     tolgeeUrl: "",
     storagePrefixKey: "portrait_unbalancedbigsmall4",
     backgroundNoTranslate: true,

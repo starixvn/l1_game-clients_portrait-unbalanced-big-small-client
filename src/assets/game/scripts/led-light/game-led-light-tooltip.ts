@@ -12,7 +12,7 @@ export class GameLedLightTooltip extends LedLightTooltip {
     @property(Layout)
     layoutResult: Layout = null;
 
-    private mainChoice = ["big", "small"];
+    private readonly mainChoice = ["big", "small"];
 
     public setTooltipInfo(ledLightInfo: gc.RoundHistories.RoundHistory) {
         const { roundId, result, settlementResult } = ledLightInfo;

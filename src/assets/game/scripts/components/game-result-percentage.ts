@@ -27,8 +27,7 @@ export class GameResultPercentage extends ObserverComponent {
     calculatePercentagesMainChoice(dataLogs: any[]) {
         if (dataLogs.length > 0) {
             let bigTotal = 0,
-                smallTotal = 0,
-                anyTriple = 0;
+                smallTotal = 0;
 
             dataLogs.forEach((log) => {
                 const { settlementResult } = log;

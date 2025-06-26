@@ -11,12 +11,11 @@ export class BetHistoryUnbalanceBigsmallBodyItem extends BetHistoryNewBodyItem {
 
     setData(data: BetHistoryBodyItemType) {
         super.setData(data);
-        const { settlementResult, freeBet, odds, totalAmount, betwin } = data.betHistoryLog;
+        const { settlementResult, odds, totalAmount, betwin } = data.betHistoryLog;
         if (settlementResult) {
             Object.keys(settlementResult).forEach((choice) => {
-                let stake = data.betHistoryLog[choice];
+                const stake = data.betHistoryLog[choice];
                 if (+stake > 0) {
-                    stake = freeBet ? 0 : stake;
                     const odd = this.getFormatOdd(odds[choice]?.toString(), data?.fractionalOddsFormat);
                     this.handleBetOptionItem(choice, odd);
                 }
@@ -28,6 +27,7 @@ export class BetHistoryUnbalanceBigsmallBodyItem extends BetHistoryNewBodyItem {
     }
 
     handleBetOptionItem(choice: string, odd: string) {
-        this.lblBet.string = `${gc.Translator.translate(`BigSmall.glossary_${choice}`)} @ ${odd}`;
+        const choiceStr = gc.Translator.translate(`BigSmall.glossary_${choice}`);
+        this.lblBet.string = `${choiceStr} @ ${odd}`;
     }
 }

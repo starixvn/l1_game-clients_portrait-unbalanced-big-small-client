@@ -10,8 +10,9 @@ import { startGame } from "db://shared-components/shared/scripts/startup";
 import Observer from "observer";
 
 import { siteConfigs } from "../../../scripts/site-configs";
-import { containerOptions, settings } from "../game-settings";
+import { settings } from "../game-settings";
 import { GameResult } from "./game-result";
+import { containerOptions } from "../containerOptions";
 
 startGame(settings.name, containerOptions, siteConfigs, settings.namespaces);
 const { Rounds, RoundHistories } = gc;
@@ -36,7 +37,7 @@ export default class Game extends GameComponent {
     protected enableFixHandleFinish = true;
     private audioContainer: AudioContainer = null;
     private isAnimatingResult = false;
-    private soundWinChoice = ["big", "small"];
+    private readonly soundWinChoice = ["big", "small"];
 
     onLoad() {
         this.audioContainer = this.nodeAudioContainer.getComponent(AudioContainer);
@@ -46,7 +47,6 @@ export default class Game extends GameComponent {
 
     @render(Rounds.RoundStore, (store) => store.clientRoundId)
     renderRoundId(roundId: number) {
-        // TODO: Remove this after resolving issue
         roundId > 1 && this.lblRoundId && (this.lblRoundId.string = `#${roundId}`);
     }
 

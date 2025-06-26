@@ -1,14 +1,10 @@
-import gc from "@sg/game-client-base";
-import { LogStore } from "db://shared-components/game/scripts/stores/log-store";
-import * as BetChoice from "../scripts";
-
-import { FakeChipHandlers } from "../../../extensions/shared-components/assets/game/chip-flying-total-bets/scripts/handlers/fake-chip-handlers";
-import { sharedContainer } from "../../scripts/shared-container";
+const GAME_NAME = "UnbalancedBigSmall4";
 
 export const settings = {
     id: 55,
-    name: "UnbalancedBigSmall4",
-    namespaces: ["UnbalancedBigSmall4", "BigSmall"],
+    name: GAME_NAME,
+    observerNamespace: GAME_NAME,
+    namespaces: [GAME_NAME, "BigSmall"],
     durations: {
         wholeRound: 40,
         lockingBet: 5,
@@ -19,14 +15,4 @@ export const settings = {
     },
     numberOfRoundHistory: 100,
     isMiniGame: true,
-};
-
-export const containerOptions: gc.IContainerOptions = {
-    globalContainer: sharedContainer,
-    onContainerCreated: (container) => {
-        container.bind(gc.GameConfigs.GameSetting).toConstantValue(settings);
-        container.bind(LogStore).to(LogStore);
-        container.bind(gc.Chips.ChipHandlers).to(FakeChipHandlers);
-    },
-    features: [BetChoice, ...gc.defaultFeatures, gc.BetDetailsNew],
 };

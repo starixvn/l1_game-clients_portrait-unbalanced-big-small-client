@@ -25,7 +25,7 @@ export class RoundResultItem extends Component {
     @property(SpriteAtlas)
     mainAtlas: SpriteAtlas = null;
 
-    private mainChoice = ["big", "small"];
+    private readonly mainChoice = ["big", "small"];
 
     setData(data: any) {
         const { result, settlementResult } = data;

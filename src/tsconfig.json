@@ -6,9 +6,6 @@
         "strict": false,
         "esModuleInterop": true,
         "resolveJsonModule": true,
-        "types": [
-            "node",
-            "jest"
-        ]
+        "types": ["node"]
     }
 }
