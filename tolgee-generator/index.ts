@@ -37,7 +37,7 @@ const CONFIG: Config = {
         languageFolder: "./src/assets/resources/i18n/",
         remoteLocalizationPath: "./src/remote/localization",
     },
-    languages: ["en", "id", "th", "vi", "zh_cn", "zh_tw"],
+    languages: ["en", "id", "th", "vi", "zh_cn", "zh_tw", "ja"],
     namespaces: {
         list: ["Common", "UnbalancedBigSmall4", "BigSmall"],
         specificKeys: {},

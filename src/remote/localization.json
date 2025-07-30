@@ -1,11 +1,12 @@
 {
     "gameNames": {
-        "en": "Big Small",
-        "id": "Besar Kecil",
-        "th": "ใหญ่/เล็ก",
-        "vi": "Tài Xỉu",
-        "zh_cn": "大小",
-        "zh_tw": "大小"
+        "en": "Monte Carlo Big Small",
+        "id": "Monte Carlo Besar Kecil",
+        "th": "มอนติคาร์โล ใหญ่-เล็ก",
+        "vi": "Tài Xỉu Monte Carlo",
+        "zh_cn": "蒙特卡罗大小",
+        "zh_tw": "蒙特卡羅大小",
+        "ja": "モンテカルロ大小"
     },
     "lobbyNames": {}
 }
