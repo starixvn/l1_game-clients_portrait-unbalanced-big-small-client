@@ -4,9 +4,10 @@
         "id": "Monte Carlo Besar Kecil",
         "th": "มอนติคาร์โล ใหญ่-เล็ก",
         "vi": "Tài Xỉu Monte Carlo",
-        "zh_cn": "蒙特卡罗大小",
+        "zh_cn": "Tài Xỉu Monte Carlo",
         "zh_tw": "蒙特卡羅大小",
-        "ja": "モンテカルロ大小"
+        "ja": "モンテカルロ大小",
+        "es": "Monte Carlo Grande Pequeño"
     },
     "lobbyNames": {}
 }
