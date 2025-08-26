@@ -1,7 +1,6 @@
 import gc from "@sg/game-client-base";
 import { _decorator, Label, Node, sp, Sprite, SpriteAtlas, tween, UIOpacity, v3 } from "cc";
 import { ObserverComponent } from "db://shared-components/shared/common-components/observer-component/scripts/observer-component";
-import { FunctionUtils } from "db://shared-components/shared/utils";
 import { AnimationUtils } from "db://shared-components/shared/utils/utils";
 import Observer from "observer";
 
@@ -27,7 +26,7 @@ export class GameResult extends ObserverComponent {
     @property(sp.Skeleton)
     skeletonDice: sp.Skeleton = null;
 
-    private readonly RESULT_DURATION = 2000;
+    private readonly RESULT_DURATION = 2;
     private readonly soundDiceShake = "dice_shake";
 
     onLoad() {
@@ -111,7 +110,7 @@ export class GameResult extends ObserverComponent {
     async showResultAnim(result: any, settlementResult: any) {
         this.setResultDiceFrames(result);
         this.skeletonDice && AnimationUtils.playSpine(this.skeletonDice, "open", false);
-        await FunctionUtils.delay(this.RESULT_DURATION);
+        await AnimationUtils.delayTime(this.RESULT_DURATION);
         this.showResultText(result, settlementResult);
     }
 
