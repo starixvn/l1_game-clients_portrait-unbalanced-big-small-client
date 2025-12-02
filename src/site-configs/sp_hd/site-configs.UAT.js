@@ -12,4 +12,5 @@ window.envConfig = {
     storagePrefixKey: "bac81",
     backgroundNoTranslate: true,
     clientSubDomain: "hduatclient",
+    decimalPlaces: 4,
 };
